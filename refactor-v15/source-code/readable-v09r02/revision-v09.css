@@ -1,0 +1,42 @@
+/* v09 r01 (10 Nov 2026). CT-PEGAS 230 payload metric: EN "100 kg max"; VI shows the qualifier first ("Tối đa 100 kg"). */
+.ps-big--max{display:flex;flex-wrap:wrap;align-items:baseline}.ps-big--max span{margin-left:.24em}html[lang="vi"] .ps-big--max .ps-big__max{order:-1;margin-left:0;margin-right:.3em}
+/* v09 r01: signing ceremony caption stays at 14 px on phones. */
+.iso-signing-photo figcaption{font-size:14px}
+/* v09 r01 Batch 2: CT SKYSILK hero uses the standard product hero. Centred crop of the supplied city image; phones keep the cabin in the middle. */
+.hero-section__image.skysilk-hero-image{object-position:50% 50%}@media (max-width:700px){.hero-section__image.skysilk-hero-image{object-position:56% 50%}}
+/* v09 r01 Batch 2: CT-PEGAS 230 hero is a standard image hero. The 3D product CSS lacks the shared full-height rule that CT-CROVA 254 uses. */
+.hero-section{min-height:100vh;min-height:100svh}
+/* v09 r01 Batch 3: language menu has eight options; it scrolls inside the menu when the window is short. */
+.language-menu{max-height:calc(var(--panel-available-height,80vh) - 16px);overflow-y:auto;overscroll-behavior:contain}
+/* v09 r01 Batch 3: CT Ency voice input is a 44 px microphone icon button on a light surface, sized like the Send button. Recording shows a stop square and an accent ring; conversion shows a slow ring pulse. */
+.cu-widget .cu-composer__row{padding-left:5px;align-items:flex-end}
+.cu-widget .cu-composer textarea{min-height:44px;padding:11px 4px}
+.cu-widget .cu-send{width:44px;height:44px}
+.cu-widget .cu-send svg{width:20px;height:20px}
+.cu-widget .cu-mic{display:grid;place-items:center;flex:none;width:44px;height:44px;min-width:44px;min-height:44px;padding:0;margin:0;border:1px solid #7d8a94;border-radius:50%;background:#fff;color:var(--cu-blue-text,#263238);cursor:pointer;transition:border-color .3s ease,box-shadow .3s ease,background-color .3s ease}
+.cu-widget .cu-mic svg{width:20px;height:20px;display:block}
+.cu-widget .cu-mic .cu-mic__icon--stop{display:none}
+.cu-widget .cu-mic:hover,.cu-widget .cu-mic[aria-expanded="true"]{border-color:var(--cu-blue,#407d9b);box-shadow:0 0 0 3px var(--cu-accent-shadow,rgba(64,125,155,.18))}
+.cu-widget .cu-mic:focus-visible{outline:2px solid #52616b;outline-offset:2px}
+.cu-widget .cu-mic[data-voice-state="recording"]{border:2px solid var(--cu-blue,#407d9b);background:var(--cu-blue-pale,#eef5f7);box-shadow:0 0 0 4px var(--cu-accent-shadow,rgba(64,125,155,.18))}
+.cu-widget .cu-mic[data-voice-state="recording"] .cu-mic__icon--mic{display:none}
+.cu-widget .cu-mic[data-voice-state="recording"] .cu-mic__icon--stop{display:block}
+.cu-widget .cu-mic[data-voice-state="converting"]{border-color:var(--cu-blue,#407d9b);background:var(--cu-blue-pale,#eef5f7);cursor:progress;animation:cu-mic-pulse 1.8s ease-in-out infinite}
+@keyframes cu-mic-pulse{0%,100%{box-shadow:0 0 0 2px var(--cu-accent-shadow,rgba(64,125,155,.18))}50%{box-shadow:0 0 0 6px var(--cu-accent-shadow,rgba(64,125,155,.18))}}
+@media (prefers-reduced-motion:reduce){.cu-widget .cu-mic{transition:none}.cu-widget .cu-mic[data-voice-state="converting"]{animation:none;box-shadow:0 0 0 4px var(--cu-accent-shadow,rgba(64,125,155,.18))}}
+/* v09 r02: Carbon Credit UAV line video after the hero. No crop: the whole 16:9 frame always shows (object-fit:contain, frame sized to 16:9 and kept below the parent Navbar; --pl-film-top is the Navbar height set by the line-video-v09 script). At rest (no script or reduced motion) the video is full-width, or full-height and centred on very wide windows, paused on its poster. With motion the script adds .is-pop: a rounded card grows with scroll to the largest uncropped size. .is-pin (landscape) pins the section with sticky; the card starts just below the Navbar line and the track moves up by the Navbar height, so the card keeps its place after the hero; portrait windows expand in the page flow. Leftover space is the light page background. The toggle sits bottom-left of the video, clear of the shell Cart button and CT Ency launcher. No overlay on the video. */
+.pl-film{position:relative;padding-top:clamp(32px,5vw,72px)}
+.pl-film__sticky{position:relative}
+.pl-film__frame{position:relative;width:100%;max-width:calc((100vh - var(--pl-film-top,0px)) * 16 / 9);max-width:calc((100svh - var(--pl-film-top,0px)) * 16 / 9);margin-inline:auto;aspect-ratio:16/9;overflow:hidden;background:var(--site-soft,#f3f5f5)}
+.pl-film__video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;object-position:50% 50%;background:var(--site-soft,#f3f5f5)}
+.pl-film__toggle{position:absolute;left:16px;bottom:16px;z-index:2;display:grid;place-items:center;width:48px;height:48px;min-width:44px;min-height:44px;padding:0;border:1px solid var(--site-soft-line,#dce1e2);border-radius:50%;background:rgba(255,255,255,.94);color:var(--pl-ink,#172127);box-shadow:0 6px 18px rgba(23,33,39,.14);cursor:pointer;transform-origin:0 100%;transition:border-color .3s ease,box-shadow .3s ease}
+.pl-film__toggle:hover{border-color:var(--site-fill-line,#8c979c);box-shadow:0 8px 22px rgba(23,33,39,.18)}
+.pl-film__toggle:focus-visible{outline:2px solid #52616b;outline-offset:3px}
+.pl-film__icon{width:22px;height:22px;display:block}
+.pl-film__toggle[data-state="playing"] .pl-film__icon--play,.pl-film__toggle[data-state="paused"] .pl-film__icon--pause{display:none}
+.pl-film.is-pop .pl-film__frame{transform-origin:0 0;will-change:transform}
+.pl-film.is-pin .pl-film__track{height:200vh;height:200svh;margin-top:calc(-1 * var(--pl-film-top,0px))}
+.pl-film.is-pin .pl-film__sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;pointer-events:none}
+.pl-film.is-pin .pl-film__frame{position:absolute;max-width:none;margin:0;aspect-ratio:auto;pointer-events:auto}
+@media (max-width:640px){.pl-film__toggle{left:12px;bottom:12px}}
+@media (prefers-reduced-motion:reduce){.pl-film__toggle{transition:none}}

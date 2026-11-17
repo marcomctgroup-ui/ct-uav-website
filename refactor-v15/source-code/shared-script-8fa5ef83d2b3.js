@@ -1,0 +1,365 @@
+
+/* CT UAV main website demo — product 3D stage v02 (27 October 2026). R2-01, option A selected by Haykal.
+   v02: works inside the combined demo (library and models from the parent document, like uav-3d-v02.js), knows
+   the four UAV models, and stops drawing while its page frame is hidden.
+   Supervisor feedback: the visitor only scrolls; the 3D model moves with the scroll, and the related figures show
+   next to it. The visitor can also drag the model to turn it.
+   Two modes on one engine:
+   - data-ps-mode="chapters" (option A): the model stays on screen while text cards scroll past. Each card
+     ([data-ps-cam]) has its own camera view. The camera moves from one view to the next with the scroll.
+   - data-ps-mode="pinned" (option B): one section stays on screen for several scroll steps. Each step
+     ([data-ps-cam]) turns the camera and shows one more figure around the model.
+   Camera view: data-ps-cam="az,el,zoom,tx,ty,tz". az: degrees from the nose (0 = front view). el: degrees above
+   the horizon. zoom: 1 = the whole UAV fits; smaller = closer. tx, ty, tz: target point, in half sizes of the UAV
+   (right, up, towards the nose).
+   Library: window.CTUAV3D_LIB (../uav-3d/vendor/three-r170-gltf-classic-v01.js). Model: window.CTUAV3D_MODELS.
+   Rule V5: calm motion. Reduced motion: the camera goes to each view at once, and nothing turns by itself. */
+(() => {
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  // Per model: where the nose points (degrees) and material notes (same values as uav-3d-v02.js).
+  const MODELS = {
+    'ct-pegas-230': { front: 90, tweak(material) {
+      const name = material.name || '';
+      if (name.startsWith('Color:202')) { material.color.set('#9097a0'); material.roughness = .62; material.metalness = 0; }
+      else if (name.startsWith('Color:0:0:255')) { material.color.set('#1a1d21'); material.roughness = .42; material.metalness = .35; }
+      else if (name.startsWith('Color:105')) { material.color.set('#b9bec4'); material.roughness = .38; material.metalness = .7; }
+      else if (name.startsWith('Carbon')) { material.roughness = Math.min(material.roughness, .35); material.envMapIntensity = 1.2; }
+    } },
+    'ct-fyran-256': { front: 0, tweak(material) { if (material.metalness > .6) material.metalness = .6; material.envMapIntensity = 1.3; } },
+    'ct-frona-44': { front: 180, tweak(material) { material.envMapIntensity = 1.1; } },
+    'decarb54': { front: 0, tweak(material) { material.envMapIntensity = 1.1; } },
+  };
+
+  // Library and model data: this page (standalone) or the parent demo document (#uav3dLib, #uav3dModel-<key>).
+  function parentElement(id) { try { return parent !== window ? parent.document.getElementById(id) : null; } catch (error) { return null; } }
+  function getLib() {
+    if (window.CTUAV3D_LIB) return window.CTUAV3D_LIB;
+    const source = parentElement('uav3dLib');
+    if (!source) return null;
+    const script = document.createElement('script');
+    script.textContent = source.textContent;
+    document.head.appendChild(script);
+    return window.CTUAV3D_LIB || null;
+  }
+  function getModelData(key) {
+    if (window.CTUAV3D_MODELS?.[key]) return window.CTUAV3D_MODELS[key];
+    const n=parentElement('uav3dModel-'+key);return n?.ctuavBytes||n?.textContent.trim()||null;}
+  const deg = value => value * Math.PI / 180;
+  const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+  const lerp = (a, b, k) => a + (b - a) * k;
+  const smooth = x => x * x * (3 - 2 * x);
+  // Each step holds its view for a short part of the scroll, then moves to the next view.
+  const hold = s => smooth(clamp((s - .18) / .64, 0, 1));
+  const parseCam = text => {
+    const [az = 35, el = 16, zoom = 1, tx = 0, ty = 0, tz = 0] = String(text || '').split(',').map(Number);
+    return { az, el, zoom, tx, ty, tz };
+  };
+
+  document.documentElement.classList.add('ps-js');
+
+  function shadowTexture(THREE) {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = 256;
+    const context = canvas.getContext('2d');
+    const gradient = context.createRadialGradient(128, 128, 0, 128, 128, 128);
+    gradient.addColorStop(0, 'rgba(23,33,39,.2)');
+    gradient.addColorStop(.5, 'rgba(23,33,39,.07)');
+    gradient.addColorStop(1, 'rgba(23,33,39,0)');
+    context.fillStyle = gradient;
+    context.fillRect(0, 0, 256, 256);
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  function setupStage(block) {
+    const mode = block.dataset.psMode === 'pinned' ? 'pinned' : 'chapters';
+    const config = MODELS[block.dataset.psModel];
+    const sticky = block.querySelector('.ps-sticky');
+    const canvas = sticky.querySelector('canvas');
+    const fallback = sticky.querySelector('.ps-fallback');
+    const status = sticky.querySelector('.ps-status');
+    const steps = [...block.querySelectorAll('[data-ps-cam]')];
+    const keys = steps.map(el => parseCam(el.dataset.psCam));
+    const dots = [...block.querySelectorAll('[data-ps-go]')];
+    const counter = block.querySelector('[data-ps-count]');
+    const bar = document.querySelector('.product-bar');
+    let barH = 0;
+    let f = 0;            // scroll position in steps: 0 … steps.length - 1
+    let currentStep = -1;
+    let onScroll = () => {};
+
+    function setBar() {
+      barH = bar ? bar.offsetHeight : 0;
+      block.style.setProperty('--ps-bar', barH + 'px');
+      document.documentElement.style.setProperty('--ps-bar', barH + 'px'); // the hero media starts below the bar
+    }
+
+    const focus = () => innerWidth < 900 ? .68 : .5;
+
+    function readScroll() {
+      const n = keys.length;
+      if (mode === 'pinned') {
+        const rect = block.getBoundingClientRect();
+        const range = Math.max(1, rect.height - sticky.offsetHeight);
+        f = clamp((barH - rect.top) / range, 0, 1) * (n - 1);
+      } else {
+        // Phones: the model is in the top part, so a card is current when it is in the lower part of the screen.
+        const mid = barH + (innerHeight - barH) * focus();
+        // Use the card, not the chapter: on phones the card sits at the bottom of a tall chapter.
+        const centres = steps.map(el => { const r = (el.querySelector('.ps-card') || el).getBoundingClientRect(); return r.top + r.height * .5; });
+        f = 0;
+        if (mid >= centres[n - 1]) f = n - 1;
+        else for (let i = 0; i < n - 1; i++) {
+          if (mid >= centres[i] && mid < centres[i + 1]) { f = i + (mid - centres[i]) / (centres[i + 1] - centres[i]); break; }
+        }
+      }
+      const step = clamp(Math.round(f), 0, n - 1);
+      steps.forEach((el, i) => {
+        el.classList.toggle('is-current', i === step);
+        // The current card always shows, even if its reveal did not run (fast jump, slow device).
+        if (i === step) el.querySelector('.ps-reveal')?.classList.add('is-in');
+        if (mode === 'pinned') el.classList.toggle('is-on', f >= i - .42);
+      });
+      if (step !== currentStep) {
+        currentStep = step;
+        dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === step)));
+        if (step > 0) block.classList.add('is-moved');
+        if (counter) counter.textContent = `${step + 1} / ${n}`;
+      }
+      onScroll();
+    }
+
+    function goToStep(i) {
+      const smoothScroll = reduceMotion.matches ? 'auto' : 'smooth';
+      if (mode === 'pinned') {
+        const top = block.getBoundingClientRect().top + scrollY - barH;
+        const range = Math.max(1, block.offsetHeight - sticky.offsetHeight);
+        scrollTo({ top: top + range * i / Math.max(1, keys.length - 1), behavior: smoothScroll });
+      } else {
+        const el = steps[i].querySelector('.ps-card') || steps[i];
+        const top = el.getBoundingClientRect().top + scrollY - barH - (innerHeight - barH) * focus() + el.offsetHeight / 2;
+        scrollTo({ top, behavior: smoothScroll });
+      }
+    }
+    dots.forEach(dot => dot.addEventListener('click', () => goToStep(Number(dot.dataset.psGo))));
+
+    let queued = false;
+    const queue = () => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; readScroll(); }); } };
+    addEventListener('scroll', queue, { passive: true });
+    addEventListener('resize', () => { setBar(); queue(); });
+    setBar();
+    readScroll();
+
+    function showFallback(text) {
+      block.classList.add('is-fallback');
+      canvas.hidden = true;
+      if (fallback) fallback.hidden = false;
+      if (status) { status.textContent = text; status.hidden = false; }
+    }
+
+    let started = false;
+    async function start() {
+      if (started) return;
+      started = true;
+      if (status) { status.textContent = 'Loading 3D model…'; status.hidden = false; }
+      let lib = null;
+      try { lib = getLib(); } catch (error) { console.warn(error); }
+      const data = getModelData(block.dataset.psModel);
+      if (!lib || !config || !data) { showFallback('3D model is not available. The model image is shown.'); return; }
+      const { THREE, GLTFLoader, MeshoptDecoder, RoomEnvironment } = lib;
+      // Test WebGL first, so a browser without it gets the image and no console errors (rule G8).
+      const probe = document.createElement('canvas');
+      if (!(probe.getContext('webgl2') || probe.getContext('webgl'))) { showFallback('3D view is not available in this browser. The model image is shown.'); return; }
+      let renderer;
+      try {
+        renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+      } catch (error) { console.warn(error); showFallback('3D view is not available in this browser. The model image is shown.'); return; }
+      renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.05;
+
+      const scene = new THREE.Scene();
+      const pmrem = new THREE.PMREMGenerator(renderer);
+      scene.environment = pmrem.fromScene(new RoomEnvironment(), .04).texture;
+      scene.environmentIntensity = .9;
+      const key1 = new THREE.DirectionalLight(0xffffff, 1.6); key1.position.set(3, 6, 4); scene.add(key1);
+      const key2 = new THREE.DirectionalLight(0xeef3f6, .8); key2.position.set(-4, 3, -5); scene.add(key2);
+      scene.add(new THREE.HemisphereLight(0xffffff, 0xd8dee1, .6));
+      const camera = new THREE.PerspectiveCamera(30, 1, .05, 100);
+
+      const bytes=typeof data==='string'?Uint8Array.from(atob(data),c=>c.charCodeAt(0)):new Uint8Array(data);
+      const loader = new GLTFLoader();
+      loader.setMeshoptDecoder(MeshoptDecoder);
+      let model;
+      try { model = (await loader.parseAsync(bytes.buffer, '')).scene; }
+      catch (error) { console.warn(error); showFallback('3D model could not load. The model image is shown.'); return; }
+      model.traverse(object => { if (object.isMesh) config.tweak(object.material); });
+
+      // Fit: largest side 2.6 units, centred, standing on the floor.
+      const box = new THREE.Box3().setFromObject(model);
+      const size = box.getSize(new THREE.Vector3());
+      const centre = box.getCenter(new THREE.Vector3());
+      const scale = 2.6 / Math.max(size.x, size.y, size.z);
+      model.scale.setScalar(scale);
+      model.position.set(-centre.x * scale, -box.min.y * scale + .02, -centre.z * scale);
+      scene.add(model);
+      const shadow = new THREE.Mesh(new THREE.PlaneGeometry(3.6, 3.6), new THREE.MeshBasicMaterial({ map: shadowTexture(THREE), transparent: true, depthWrite: false }));
+      shadow.rotation.x = -Math.PI / 2;
+      shadow.position.y = .003;
+      scene.add(shadow);
+
+      const sx = size.x * scale, sz = size.z * scale, height = size.y * scale;
+      const footprint = .5 * Math.hypot(sx, sz) * .82; // half width of the turning UAV
+      const front = deg(config.front);
+      const nose = new THREE.Vector3(Math.sin(front), 0, Math.cos(front));
+      const right = new THREE.Vector3(Math.cos(front), 0, -Math.sin(front));
+      const halfNose = .5 * (Math.abs(nose.x) * sx + Math.abs(nose.z) * sz);
+      const halfRight = .5 * (Math.abs(right.x) * sx + Math.abs(right.z) * sz);
+      const baseTarget = new THREE.Vector3(0, height * .5, 0);
+
+      // Where the model sits on the screen. Option A: right side (cards on the left); on narrow screens, the top
+      // part (card at the bottom). Option B: the centre (figures on both sides); on narrow screens, the top part.
+      let width = 0, heightPx = 0, area = { w: .5, h: .8 };
+      function resize() {
+        width = sticky.clientWidth; heightPx = sticky.clientHeight;
+        if (!width || !heightPx) return;
+        renderer.setSize(width, heightPx, false);
+        camera.aspect = width / heightPx;
+        const narrow = width < 900;
+        camera.fov = narrow ? 36 : 30;
+        if (mode === 'chapters') {
+          if (narrow) { camera.setViewOffset(width, heightPx, 0, heightPx * .21, width, heightPx); area = { w: .9, h: .38 }; }
+          else { camera.setViewOffset(width, heightPx, -width * .2, 0, width, heightPx); area = { w: .52, h: .72 }; }
+        } else if (narrow) { camera.setViewOffset(width, heightPx, 0, heightPx * .14, width, heightPx); area = { w: .9, h: .44 }; }
+        else { camera.setViewOffset(width, heightPx, 0, -heightPx * .02, width, heightPx); area = { w: .42, h: .62 }; }
+        camera.updateProjectionMatrix();
+        dirty = true;
+      }
+
+      // Drag (or arrow keys) adds a turn to the scroll view. Two seconds after the last drag, the model
+      // goes back slowly to the view of the current step.
+      let yaw = 0, pitch = 0, dragging = false, lastX = 0, lastY = 0, lastInput = 0;
+      canvas.addEventListener('pointerdown', event => {
+        dragging = true; lastX = event.clientX; lastY = event.clientY;
+        canvas.setPointerCapture(event.pointerId);
+        block.classList.add('is-dragging');
+      });
+      canvas.addEventListener('pointermove', event => {
+        if (!dragging) return;
+        yaw -= (event.clientX - lastX) * .008;
+        pitch = clamp(pitch + (event.clientY - lastY) * .005, -.5, .9);
+        lastX = event.clientX; lastY = event.clientY;
+        lastInput = performance.now(); dirty = true;
+      });
+      const endDrag = () => { dragging = false; lastInput = performance.now(); block.classList.remove('is-dragging'); };
+      canvas.addEventListener('pointerup', endDrag);
+      canvas.addEventListener('pointercancel', endDrag);
+      canvas.addEventListener('keydown', event => {
+        const step = { ArrowLeft: [-.26, 0], ArrowRight: [.26, 0], ArrowUp: [0, .17], ArrowDown: [0, -.17] }[event.key];
+        if (!step) return;
+        event.preventDefault();
+        yaw += step[0]; pitch = clamp(pitch + step[1], -.5, .9);
+        lastInput = performance.now(); dirty = true;
+      });
+
+      let visible = true, active = true;
+      let dirty = true;
+      // In the combined demo, a hidden page frame does not draw.
+      addEventListener('message', event => {
+        if (event.source === parent && event.data?.namespace === 'ctuav-demo' && event.data.type === 'view-active') { active = !!event.data.active; dirty = true; }
+      });
+      let shown = f;
+      new IntersectionObserver(entries => { visible = entries[0].isIntersecting; dirty = true; }).observe(block);
+      new ResizeObserver(resize).observe(sticky);
+      resize();
+      onScroll = () => { dirty = true; };
+
+      const target = new THREE.Vector3();
+      function pose(value) {
+        const n = keys.length;
+        const i = clamp(Math.floor(value), 0, n - 1);
+        const j = Math.min(n - 1, i + 1);
+        const k = hold(value - i);
+        const a = keys[i], b = keys[j];
+        let daz = b.az - a.az;
+        if (daz > 180) daz -= 360;
+        if (daz < -180) daz += 360;
+        return { az: a.az + daz * k, el: lerp(a.el, b.el, k), zoom: lerp(a.zoom, b.zoom, k), tx: lerp(a.tx, b.tx, k), ty: lerp(a.ty, b.ty, k), tz: lerp(a.tz, b.tz, k) };
+      }
+
+      let last = performance.now();
+      function frame(now) {
+        requestAnimationFrame(frame);
+        const dt = Math.min(.05, (now - last) / 1000);
+        last = now;
+        if (!visible || !active || !width) return;
+        const catchUp = Math.abs(f - shown) > .0005;
+        const returning = !dragging && (Math.abs(yaw) > .0005 || Math.abs(pitch) > .0005) && now - lastInput > 2000;
+        if (!catchUp && !returning && !dirty) return;
+        dirty = false;
+        shown = reduceMotion.matches ? f : shown + (f - shown) * Math.min(1, dt * 5);
+        if (returning) {
+          const k = reduceMotion.matches ? 1 : Math.min(1, dt * 1.4);
+          yaw -= yaw * k; pitch -= pitch * k;
+        }
+        const p = pose(shown);
+        const az = front + deg(p.az) + yaw;
+        const el = clamp(deg(p.el) + pitch, deg(-8), deg(82));
+        target.copy(baseTarget)
+          .addScaledVector(right, p.tx * halfRight)
+          .addScaledVector(nose, p.tz * halfNose);
+        target.y += p.ty * height * .5;
+        // Fit the width (turning footprint) and the height (UAV height plus footprint depth seen from above).
+        const tanV = Math.tan(deg(camera.fov / 2));
+        const fitWidth = footprint / (tanV * camera.aspect * area.w);
+        const fitHeight = (.5 * height * Math.cos(el) + footprint * Math.sin(Math.max(0, el))) / (tanV * area.h);
+        const distance = (Math.max(fitWidth, fitHeight) * .96 + footprint * .12) * p.zoom;
+        camera.position.set(target.x + distance * Math.cos(el) * Math.sin(az), target.y + distance * Math.sin(el), target.z + distance * Math.cos(el) * Math.cos(az));
+        camera.lookAt(target);
+        renderer.render(scene, camera);
+      }
+      requestAnimationFrame(frame);
+      if (status) status.hidden = true;
+      block.classList.add('is-ready');
+    }
+
+    if (!('IntersectionObserver' in window)) { start(); return; }
+    const near = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) { near.disconnect(); start(); }
+    }, { rootMargin: '800px 0px' });
+    near.observe(block);
+  }
+
+  document.querySelectorAll('[data-ps-stage]').forEach(setupStage);
+
+  // Text cards (option A) reveal one time, in 1800 ms (rule V5).
+  const cards = [...document.querySelectorAll('.ps-reveal')];
+  if ('IntersectionObserver' in window && !reduceMotion.matches) {
+    const reveal = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('is-in'); reveal.unobserve(entry.target); }
+    }), { threshold: .2 });
+    cards.forEach(card => reveal.observe(card));
+  } else cards.forEach(card => card.classList.add('is-in'));
+
+  // Hero video: plays only while it is on the screen. Pause video stops it. Reduced motion: it does not start.
+  document.querySelectorAll('[data-ps-video]').forEach(hero => {
+    const video = hero.querySelector('video');
+    const toggle = hero.querySelector('[data-ps-video-toggle]');
+    let userPaused = reduceMotion.matches;
+    let onScreen = true;
+    function sync() {
+      const play = onScreen && pageActive && !userPaused;
+      if (play && video.paused) video.play().catch(() => {});
+      if (!play && !video.paused) video.pause();
+      toggle.textContent = userPaused ? 'Play video' : 'Pause video';
+    }
+    let pageActive = true;
+    toggle.addEventListener('click', () => { userPaused = !userPaused; sync(); });
+    addEventListener('message', event => {
+      if (event.source === parent && event.data?.namespace === 'ctuav-demo' && event.data.type === 'view-active') { pageActive = !!event.data.active; sync(); }
+    });
+    new IntersectionObserver(entries => { onScreen = entries[0].isIntersecting; sync(); }, { threshold: .2 }).observe(hero);
+    sync();
+  });
+})();
+

@@ -1,0 +1,5 @@
+
+/* Haykal, 3 November: keep the launcher at the viewport's right centre.
+   Override r08's hero/status lift; menu/modal hiding and open-panel rules remain. */
+.cu-widget[data-embedded] .cu-launcher{top:50%;bottom:auto;right:max(26px,env(safe-area-inset-right));transform:translateY(-50%);transition:box-shadow .3s var(--cu-ease)}
+@media(max-width:600px){.cu-widget[data-embedded] .cu-launcher{right:max(14px,env(safe-area-inset-right))}}

@@ -1,0 +1,577 @@
+{
+ "line-01": {
+  "path": "applications/passenger-uav/",
+  "title": "Passenger UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-02": {
+  "path": "applications/cargo-uav/",
+  "title": "Cargo UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-03": {
+  "path": "applications/rescue-emergency-delivery-uav/",
+  "title": "Rescue & Emergency Delivery UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-04": {
+  "path": "applications/firefighting-uav/",
+  "title": "Firefighting UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-05": {
+  "path": "applications/carbon-credit-uav/",
+  "title": "Carbon Credit UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-06": {
+  "path": "applications/drone-light-show/",
+  "title": "Drone Light Show | CT UAV",
+  "description_source": "page text"
+ },
+ "line-07": {
+  "path": "applications/security-uav/",
+  "title": "Surveillance UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-08": {
+  "path": "applications/border-surveillance-uav/",
+  "title": "Border Surveillance UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-09": {
+  "path": "applications/agricultural-uav/",
+  "title": "Agricultural UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-10": {
+  "path": "applications/forestry-uav/",
+  "title": "Forestry UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-11": {
+  "path": "applications/aquaculture-uav/",
+  "title": "Aquaculture UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-12": {
+  "path": "applications/digital-transformation-uav/",
+  "title": "Digital Transformation UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-13": {
+  "path": "applications/electric-power-uav/",
+  "title": "Electric Power UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-14": {
+  "path": "applications/construction-inspection-uav/",
+  "title": "Construction Inspection UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-15": {
+  "path": "applications/renewable-energy-uav/",
+  "title": "Renewable Energy UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "line-16": {
+  "path": "applications/bim-uav/",
+  "title": "BIM UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "decarb22": {
+  "path": "products/decarb-22/",
+  "title": "DECARB 22 | CT UAV",
+  "description_source": "page text"
+ },
+ "ct-skysilk": {
+  "path": "products/ct-skysilk/",
+  "title": "CT SKYSILK | CT UAV",
+  "description_source": "page text"
+ },
+ "ct-camel-256": {
+  "path": "products/ct-camel-256/",
+  "title": "CT-CAMEL 256 | CT UAV",
+  "description_source": "page text"
+ },
+ "ct-pegas-230": {
+  "path": "products/ct-pegas-230/",
+  "title": "CT-PEGAS 230 | CT UAV",
+  "description_source": "page text"
+ },
+ "ct-fyran-256": {
+  "path": "products/ct-fyran-256/",
+  "title": "CT-FYRAN 256 | CT UAV",
+  "description_source": "page text"
+ },
+ "ct-frona-44": {
+  "path": "products/ct-frona-44/",
+  "title": "CT-FRONA 44 | CT UAV",
+  "description_source": "page text"
+ },
+ "ct-crova-254": {
+  "path": "products/ct-crova-254/",
+  "title": "CT-CROVA 254 | CT UAV",
+  "description_source": "page text"
+ },
+ "decarb54": {
+  "path": "products/decarb-54/",
+  "title": "DECARB 54 | CT UAV",
+  "description_source": "page text"
+ },
+ "about": {
+  "path": "about/",
+  "title": "About CT UAV",
+  "description_source": "page text"
+ },
+ "shareholders": {
+  "path": "partnerships/",
+  "title": "Partnerships | CT UAV",
+  "description_source": "page text"
+ },
+ "news": {
+  "path": "news/",
+  "title": "News | CT UAV",
+  "description_source": "page text"
+ },
+ "news-post": {
+  "path": "news/us-joint-venture-assembly-plant/",
+  "title": "CT UAV inaugurates UAV joint venture assembly plant in the United States | CT UAV News",
+  "description_source": "page text"
+ },
+ "contact": {
+  "path": "contact/",
+  "title": "Contact CT UAV | CT UAV",
+  "description_source": "page text"
+ },
+ "products": {
+  "path": "products/",
+  "title": "Products | CT UAV",
+  "description_source": "page text"
+ },
+ "uav-components": {
+  "path": "components/",
+  "title": "UAV Components | CT UAV",
+  "description_source": "page text"
+ },
+ "component-3530": {
+  "path": "components/3530/",
+  "title": "3530 | CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-p24-11-5-vz": {
+  "path": "components/ct-p24-11-5-vz/",
+  "title": "CT-P24×11.5 VZ | CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-amc05-24": {
+  "path": "components/ct-amc05-24/",
+  "title": "CT-AMC05-24 | CT UAV",
+  "description_source": "page text"
+ },
+ "ct-glova": {
+  "path": "products/ct-glova/",
+  "title": "CT-GLOVA | CT UAV",
+  "description_source": "page text"
+ },
+ "ct-fyran-firefighting": {
+  "path": "products/ct-fryan/",
+  "title": "CT-FRYAN (Firefighting) | CT UAV",
+  "description_source": "page text"
+ },
+ "component-esc-100a-6s": {
+  "path": "components/esc-100a-6s/",
+  "title": "ESC-100A-6S | CT UAV",
+  "description_source": "page text"
+ },
+ "component-esc-14s-60a": {
+  "path": "components/esc-14s-60a/",
+  "title": "ESC-14S-60A | CT UAV",
+  "description_source": "page text"
+ },
+ "component-esc-14s-80a-vesc": {
+  "path": "components/esc-14s-80a-vesc/",
+  "title": "ESC-14S-80A-VESC | CT UAV",
+  "description_source": "page text"
+ },
+ "component-esc-80a-14s-foc": {
+  "path": "components/esc-80a-14s-foc/",
+  "title": "ESC-80A-14S-FOC | CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-p1510-eolo": {
+  "path": "components/ct-p1510-eolo/",
+  "title": "CT-P1510 Eolo | CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-p2892-tm": {
+  "path": "components/ct-p2892-tm/",
+  "title": "CT-P2892 TM | CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-p42-16-5-vz": {
+  "path": "components/ct-p42-16-5-vz/",
+  "title": "CT-P42×16.5 VZ | CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-p60-63-hd": {
+  "path": "components/ct-p60-63-hd/",
+  "title": "CT-P60-63-HD | CT UAV",
+  "description_source": "page text"
+ },
+ "component-1180": {
+  "path": "components/1180/",
+  "title": "1180 | CT UAV",
+  "description_source": "page text"
+ },
+ "component-1380": {
+  "path": "components/1380/",
+  "title": "1380 | CT UAV",
+  "description_source": "page text"
+ },
+ "component-5008": {
+  "path": "components/5008/",
+  "title": "5008 | CT UAV",
+  "description_source": "page text"
+ },
+ "component-8120-kv100": {
+  "path": "components/8120-kv100/",
+  "title": "8120 (KV100) | CT UAV",
+  "description_source": "page text"
+ },
+ "component-4120": {
+  "path": "components/4120/",
+  "title": "4120 | CT UAV",
+  "description_source": "page text"
+ },
+ "component-fc-csi-250": {
+  "path": "components/fc-csi-250/",
+  "title": "FC-CSI-250 | CT UAV",
+  "description_source": "page text"
+ },
+ "component-fc-nexus-plus": {
+  "path": "components/fc-nexus-plus/",
+  "title": "FC-NEXUS-PLUS | CT UAV",
+  "description_source": "page text"
+ },
+ "component-gps-m9n-6-pin": {
+  "path": "components/gps-m9n-6-pin/",
+  "title": "GPS-M9N-6-PIN | CT UAV",
+  "description_source": "page text"
+ },
+ "component-gps-matek-m8q": {
+  "path": "components/gps-matek-m8q/",
+  "title": "GPS-MATEK-M8Q | CT UAV",
+  "description_source": "page text"
+ },
+ "component-gps-zed-f9p-uart-10-pin": {
+  "path": "components/gps-zed-f9p-uart-10-pin/",
+  "title": "GPS-ZED-F9P-UART-10-PIN | CT UAV",
+  "description_source": "page text"
+ },
+ "component-gps-zed-f9p-uart-6-pin": {
+  "path": "components/gps-zed-f9p-uart-6-pin/",
+  "title": "GPS-ZED-F9P-UART-6-PIN | CT UAV",
+  "description_source": "page text"
+ },
+ "component-hv-pdb-14s-ultra-precision": {
+  "path": "components/hv-pdb-14s-ultra-precision/",
+  "title": "HV-PDB-14S-ULTRA-PRECISION | CT UAV",
+  "description_source": "page text"
+ },
+ "component-telemetry-radio": {
+  "path": "components/telemetry-radio/",
+  "title": "TELEMETRY-RADIO | CT UAV",
+  "description_source": "page text"
+ },
+ "component-video-transmission": {
+  "path": "components/video-transmission/",
+  "title": "VIDEO-TRANSMISSION | CT UAV",
+  "description_source": "page text"
+ },
+ "component-10020": {
+  "path": "components/10020/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-vtx-and-vrx": {
+  "path": "components/vtx-and-vrx/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-1865v2": {
+  "path": "components/abc-1865v2/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-2170h3": {
+  "path": "components/abc-2170h3/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-2170p4": {
+  "path": "components/abc-2170p4/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-2170t1": {
+  "path": "components/abc-2170t1/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-lp12s8-hv": {
+  "path": "components/abc-lp12s8-hv/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-lp14s10-hv": {
+  "path": "components/abc-lp14s10-hv/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-lp18s10-hv": {
+  "path": "components/abc-lp18s10-hv/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-lp24s16-hv": {
+  "path": "components/abc-lp24s16-hv/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-lp6s5-hv": {
+  "path": "components/abc-lp6s5-hv/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-ib-12s": {
+  "path": "components/ct-ib-12s/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-ib-14s": {
+  "path": "components/ct-ib-14s/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-ib-18s": {
+  "path": "components/ct-ib-18s/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-ib-6s": {
+  "path": "components/ct-ib-6s/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-lp12s10": {
+  "path": "components/abc-lp12s10/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-lp14s8-h75": {
+  "path": "components/abc-lp14s8-h75/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-lp24s8-h60": {
+  "path": "components/abc-lp24s8-h60/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-lp6s8-h75": {
+  "path": "components/abc-lp6s8-h75/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-10ah": {
+  "path": "components/abc-ss-10ah/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-20ah": {
+  "path": "components/abc-ss-20ah/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-30ah": {
+  "path": "components/abc-ss-30ah/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-35ah": {
+  "path": "components/abc-ss-35ah/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-50ah": {
+  "path": "components/abc-ss-50ah/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-108s30hv": {
+  "path": "components/abc-ss-108s30hv/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-108s35hv": {
+  "path": "components/abc-ss-108s35hv/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-108s50hv": {
+  "path": "components/abc-ss-108s50hv/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-216s30hv": {
+  "path": "components/abc-ss-216s30hv/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-12s30": {
+  "path": "components/abc-ss-12s30/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-12s35": {
+  "path": "components/abc-ss-12s35/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-18s30": {
+  "path": "components/abc-ss-18s30/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-24s35": {
+  "path": "components/abc-ss-24s35/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-abc-ss-6s30": {
+  "path": "components/abc-ss-6s30/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-bms-150a": {
+  "path": "components/bms-150a/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-bms-160a": {
+  "path": "components/bms-160a/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-bms-230a": {
+  "path": "components/bms-230a/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-bms-80a": {
+  "path": "components/bms-80a/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-1600w-12s": {
+  "path": "components/ct-1600w-12s/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-300w-6s": {
+  "path": "components/ct-300w-6s/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-60000w-24s": {
+  "path": "components/ct-60000w-24s/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-600w-6s": {
+  "path": "components/ct-600w-6s/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-hrc01": {
+  "path": "components/ct-hrc01/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-bws": {
+  "path": "components/ct-bws/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-dfe06": {
+  "path": "components/ct-dfe06/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-dpf": {
+  "path": "components/ct-dpf/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-sps02-30l": {
+  "path": "components/ct-sps02-30l/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-ez30": {
+  "path": "components/ct-ez30/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-ez40-ai": {
+  "path": "components/ct-ez40-ai/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-ez6": {
+  "path": "components/ct-ez6/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-ogi24-o640": {
+  "path": "components/ct-ogi24-o640/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-gimbal-3axis": {
+  "path": "components/gimbal-3axis/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-gimbal-bgc-4-0": {
+  "path": "components/gimbal-bgc-4-0/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-amc01-24-t640": {
+  "path": "components/ct-amc01-24-t640/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-amc01-61": {
+  "path": "components/ct-amc01-61/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-amc01-61-ms14": {
+  "path": "components/ct-amc01-61-ms14/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-ct-amc01-ms14": {
+  "path": "components/ct-amc01-ms14/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ },
+ "component-payload-drop": {
+  "path": "components/payload-drop/",
+  "title": "CT UAV",
+  "description_source": "page text"
+ }
+}

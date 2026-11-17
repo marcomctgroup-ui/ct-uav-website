@@ -1,0 +1,2599 @@
+{
+  "folders": {
+    "library": 240720253381629,
+    "uav-products": 240720260463614,
+    "product-lines": 240720261880831,
+    "uav-components": 240720263269376,
+    "technologies": 240720264608769,
+    "creative-assets": 240720266046466,
+    "articles": 240720269319171,
+    "pages": 240720270609412,
+    "settings": 240720272014341
+  },
+  "asset_folder": 240720273372022,
+  "assets": {
+    "../assets/img/decarb22-poster-b3129b609e-measured.webp": {
+      "id": 240720686816263,
+      "uuid": "6e9949d8-f52b-4627-9059-97d588950fc8",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240720362363856",
+        "title": "decarb22-poster-b3129b609e-measured.webp",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "image",
+        "version": "v01",
+        "sha256": "cfdd7188a33466bc73cbce13d8a7019ced3fd0bb81d53c4cb445c49eac19e625",
+        "language": "neutral",
+        "file": {
+          "id": 240720362363856,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/1440x810/7e9d682fa5/decarb22-poster-b3129b609e-measured.webp",
+          "alt": "",
+          "title": "decarb22-poster-b3129b609e-measured.webp"
+        }
+      }
+    },
+    "../assets/img/decarb54-poster-b3641b0d06-measured.webp": {
+      "id": 240720688020488,
+      "uuid": "23aa9e32-9c36-430e-9a0d-aab29fb6d433",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240720406014930",
+        "title": "decarb54-poster-b3641b0d06-measured.webp",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "image",
+        "version": "v01",
+        "sha256": "fc222128a643d0aa70159ae3775068664a358d084d05766591f0f07c66e4f405",
+        "language": "neutral",
+        "file": {
+          "id": 240720406014930,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/1920x1080/47c7672790/decarb54-poster-b3641b0d06-measured.webp",
+          "alt": "",
+          "title": "decarb54-poster-b3641b0d06-measured.webp"
+        }
+      }
+    },
+    "../assets/img/agricultural-uav-spraying-a-green-field-23cb1feb97-web.webp": {
+      "id": 240720689208329,
+      "uuid": "e47c71fe-19b6-4ac0-bb44-b3afa4aa5ba3",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240720437943256",
+        "title": "agricultural-uav-spraying-a-green-field-23cb1feb97-web.webp",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "image",
+        "version": "v01",
+        "sha256": "e6c23060c86728bd40fa64e15d4bd240e663480df4a161e1998d36640abb96d9",
+        "language": "neutral",
+        "file": {
+          "id": 240720437943256,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/1000x563/625dd6d119/agricultural-uav-spraying-a-green-field-23cb1feb97-web.webp",
+          "alt": "",
+          "title": "agricultural-uav-spraying-a-green-field-23cb1feb97-web.webp"
+        }
+      }
+    },
+    "../assets/img/ct-pegas-230-hero-0e67403b8c-1672.webp": {
+      "id": 240720690306058,
+      "uuid": "9c20a68e-2af4-4a59-95f3-0045d3f00aaa",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240720451038170",
+        "title": "ct-pegas-230-hero-0e67403b8c-1672.webp",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "image",
+        "version": "v01",
+        "sha256": "0e67403b8cbf4e20e3e89b4f2b5e5c68daaa60214ec19c007b6b40b18a63661b",
+        "language": "neutral",
+        "file": {
+          "id": 240720451038170,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/1672x941/509aabd1f0/ct-pegas-230-hero-0e67403b8c-1672.webp",
+          "alt": "",
+          "title": "ct-pegas-230-hero-0e67403b8c-1672.webp"
+        }
+      }
+    },
+    "../assets/video/decarb22-f20189a2a8-web.mp4": {
+      "id": 240720691452939,
+      "uuid": "c7fc9189-15c4-418a-a770-a67a53e55f61",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240720342637519",
+        "title": "decarb22-f20189a2a8-web.mp4",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "video",
+        "version": "v01",
+        "sha256": "6cee7ee1d56c272dae3af598a5ea9bb9321a0159363a71247e07a9b4e91f9602",
+        "language": "neutral",
+        "file": {
+          "id": 240720342637519,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/a77296bfa2/decarb22-f20189a2a8-web.mp4",
+          "alt": "",
+          "title": "decarb22-f20189a2a8-web.mp4"
+        },
+        "poster": "6e9949d8-f52b-4627-9059-97d588950fc8"
+      }
+    },
+    "../assets/video/decarb54-ce9bf3be66.mp4": {
+      "id": 240720692567052,
+      "uuid": "4c42d2ff-2d37-478b-bb4f-20d1e63c6977",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240720385010641",
+        "title": "decarb54-ce9bf3be66.mp4",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "video",
+        "version": "v01",
+        "sha256": "ce9bf3be6619d027c483914f515c0381420acd5bb8263f3a7e62ee89dac7e005",
+        "language": "neutral",
+        "file": {
+          "id": 240720385010641,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/d0060a8fd0/decarb54-ce9bf3be66.mp4",
+          "alt": "",
+          "title": "decarb54-ce9bf3be66.mp4"
+        },
+        "poster": "23aa9e32-9c36-430e-9a0d-aab29fb6d433"
+      }
+    },
+    "../assets/models/decarb54-5582490efd.glb": {
+      "id": 240720693701645,
+      "uuid": "cd7159b9-6559-4a5c-8d21-274bbfd28678",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240720419752915",
+        "title": "decarb54-5582490efd.glb",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "model",
+        "version": "v01",
+        "sha256": "5582490efda24426683f1e463d409d9888e75d906f469c807dd7474bc4d632ea",
+        "language": "neutral",
+        "file": {
+          "id": 240720419752915,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/3f576f541d/decarb54-5582490efd.glb",
+          "alt": "",
+          "title": "decarb54-5582490efd.glb"
+        },
+        "poster": "23aa9e32-9c36-430e-9a0d-aab29fb6d433"
+      }
+    },
+    "../assets/models/ct-pegas-230-14b620b6e7.glb": {
+      "id": 240720694877198,
+      "uuid": "69bab99f-5768-4271-baf4-0b02538014b2",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240720466340827",
+        "title": "ct-pegas-230-14b620b6e7.glb",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "model",
+        "version": "v01",
+        "sha256": "14b620b6e78c50437b38b244665b4479c1697dc5bc01a15576ed9328c88f571d",
+        "language": "neutral",
+        "file": {
+          "id": 240720466340827,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/34ffeab14d/ct-pegas-230-14b620b6e7.glb",
+          "alt": "",
+          "title": "ct-pegas-230-14b620b6e7.glb"
+        },
+        "poster": "9c20a68e-2af4-4a59-95f3-0045d3f00aaa"
+      }
+    },
+    "../assets/img/decarb-22-over-terraced-fields-e990e12c53-web.webp": {
+      "id": 240723472575548,
+      "uuid": "97343775-0cda-4312-9996-9784ba3e56e3",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240723457748087",
+        "title": "decarb-22-over-terraced-fields-e990e12c53-web.webp",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "image",
+        "version": "v01",
+        "sha256": "f05fa98128b138ac6f8a68582cc1dbe2becf74a0bbc8b1fabed05406c56c8fd6",
+        "language": "neutral",
+        "alt": "DECARB 22 over terraced fields",
+        "alt__i18n__vi": "DECARB 22 bay trên ruộng bậc thang",
+        "file": {
+          "id": 240723457748087,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/557x383/9468c20ba9/decarb-22-over-terraced-fields-e990e12c53-web.webp",
+          "alt": "DECARB 22 over terraced fields",
+          "title": "decarb-22-over-terraced-fields-e990e12c53-web.webp"
+        }
+      }
+    },
+    "../assets/img/decarb-22-forest-and-land-survey-application-7914927d9b-web.webp": {
+      "id": 240723487652925,
+      "uuid": "c72485fe-7000-41ec-adf4-b1c8bf149344",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240723475049593",
+        "title": "decarb-22-forest-and-land-survey-application-7914927d9b-web.webp",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "image",
+        "version": "v01",
+        "sha256": "78ec7ea2933dc0912606efac05348eb6077e956222b343cf217183af33439569",
+        "language": "neutral",
+        "alt": "DECARB 22 forest and land survey application",
+        "alt__i18n__vi": "Ứng dụng khảo sát rừng và đất đai của DECARB 22",
+        "file": {
+          "id": 240723475049593,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/555x367/a93f845645/decarb-22-forest-and-land-survey-application-7914927d9b-web.webp",
+          "alt": "DECARB 22 forest and land survey application",
+          "title": "decarb-22-forest-and-land-survey-application-7914927d9b-web.webp"
+        }
+      }
+    },
+    "../assets/img/decarb-54-multirotor-over-a-coastline-fde51e871f-web.webp": {
+      "id": 240723501567038,
+      "uuid": "c932ba16-00aa-4be4-b436-4088177afc5f",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240723488894074",
+        "title": "decarb-54-multirotor-over-a-coastline-fde51e871f-web.webp",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "image",
+        "version": "v01",
+        "sha256": "208259c397431473d1beb1bb92b67b8a786fb6069cd42d0d0b168f81faec72d0",
+        "language": "neutral",
+        "alt": "DECARB 54 multirotor over a coastline",
+        "alt__i18n__vi": "DECARB 54 đa cánh quạt bay trên bờ biển",
+        "file": {
+          "id": 240723488894074,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/483x232/debd0d5bb3/decarb-54-multirotor-over-a-coastline-fde51e871f-web.webp",
+          "alt": "DECARB 54 multirotor over a coastline",
+          "title": "decarb-54-multirotor-over-a-coastline-fde51e871f-web.webp"
+        }
+      }
+    },
+    "../assets/img/ct-crova-254-model-image-3e6778b109-web.webp": {
+      "id": 240723517348927,
+      "uuid": "d21d2be1-795b-458a-b414-9a5e7a547a62",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240723504749692",
+        "title": "ct-crova-254-model-image-3e6778b109-web.webp",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "image",
+        "version": "v01",
+        "sha256": "9746f5e45272604a0a7955354fba63dfb9b0cbb7145da72ded1b6fce4a1a33e8",
+        "language": "neutral",
+        "alt": "CT-CROVA 254 model image",
+        "alt__i18n__vi": "Hình ảnh mẫu máy CT-CROVA 254",
+        "file": {
+          "id": 240723504749692,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/1024x576/8c5209eafd/ct-crova-254-model-image-3e6778b109-web.webp",
+          "alt": "CT-CROVA 254 model image",
+          "title": "ct-crova-254-model-image-3e6778b109-web.webp"
+        }
+      }
+    },
+    "../assets/img/rescue-uav-carrying-a-supply-box-over-a-flooded-area-d1293c6dfc-measured.webp": {
+      "id": 240723532471360,
+      "uuid": "98ca6bf7-d7aa-4687-ade1-ff78eed2b000",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240723518684285",
+        "title": "rescue-uav-carrying-a-supply-box-over-a-flooded-area-d1293c6dfc-measured.webp",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "image",
+        "version": "v01",
+        "sha256": "036172466720eb05b8834ec0d78b461c8924b8a064222647ed587bc55dac79ba",
+        "language": "neutral",
+        "alt": "Rescue UAV carrying a supply box over a flooded area",
+        "alt__i18n__vi": "UAV cứu hộ chở thùng vật tư bay qua vùng ngập lụt",
+        "file": {
+          "id": 240723518684285,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/1212x682/8326bcdf37/rescue-uav-carrying-a-supply-box-over-a-flooded-area-d1293c6dfc-measured.webp",
+          "alt": "Rescue UAV carrying a supply box over a flooded area",
+          "title": "rescue-uav-carrying-a-supply-box-over-a-flooded-area-d1293c6dfc-measured.webp"
+        }
+      }
+    },
+    "../assets/img/rescue-uav-spraying-disinfectant-in-a-narrow-street-251656c424-measured.webp": {
+      "id": 240723545521217,
+      "uuid": "6765b457-aec0-4063-90c0-c10db1792415",
+      "content": {
+        "component": "creative_asset",
+        "content_id": "asset-240723533548673",
+        "title": "rescue-uav-spraying-disinfectant-in-a-narrow-street-251656c424-measured.webp",
+        "review_state": "draft",
+        "ready_languages": [],
+        "media_type": "image",
+        "version": "v01",
+        "sha256": "061a9f4011e540b401b9bf5fbbf5ebf5231812129c8f8373d3b2829db08e10df",
+        "language": "neutral",
+        "alt": "Rescue UAV spraying disinfectant in a narrow street",
+        "alt__i18n__vi": "UAV cứu hộ phun khử khuẩn trong hẻm nhỏ",
+        "file": {
+          "id": 240723533548673,
+          "fieldtype": "asset",
+          "filename": "https://a.storyblok.com/f/296496301258837/1212x682/15293237ec/rescue-uav-spraying-disinfectant-in-a-narrow-street-251656c424-measured.webp",
+          "alt": "Rescue UAV spraying disinfectant in a narrow street",
+          "title": "rescue-uav-spraying-disinfectant-in-a-narrow-street-251656c424-measured.webp"
+        }
+      }
+    }
+  },
+  "technologies": [
+    {
+      "id": 240723773553730,
+      "uuid": "f7d20788-5ee2-48e5-aa0e-e98f8630e701",
+      "content": {
+        "_uid": "b2549971-b6e9-4dfa-a0b3-e01f8bcd2230",
+        "title": "Built for survey work",
+        "summary": "Long-endurance VTOL platform for carbon MRV missions\nSurvey-grade GNSS / RTK positioning\nMapping and multispectral mission capability\nHigh-area coverage for forest and land-carbon assessments",
+        "component": "technology",
+        "content_id": "technology-decarb22",
+        "review_state": "draft",
+        "ready_languages": [],
+        "title__i18n__vi": "Thiết kế cho công tác khảo sát",
+        "summary__i18n__vi": "Nền tảng VTOL thời gian bay dài cho nhiệm vụ MRV carbon\nĐịnh vị GNSS / RTK cấp khảo sát\nKhả năng thực hiện nhiệm vụ lập bản đồ và đa phổ\nDiện tích bao phủ lớn cho đánh giá carbon rừng và đất",
+        "development_status": "pending"
+      }
+    },
+    {
+      "id": 240723778993219,
+      "uuid": "2428de70-5497-4c19-9deb-dd1592dae865",
+      "content": {
+        "_uid": "4401110f-30e7-4bf2-ac60-82ca0cf070da",
+        "title": "Built for field work",
+        "summary": "Smart sprinkler system for large-scale pesticide application and fertilizer spreading\nOptimizes input usage and crop yield",
+        "component": "technology",
+        "content_id": "technology-ct-crova-254",
+        "review_state": "draft",
+        "ready_languages": [],
+        "title__i18n__vi": "Thiết kế cho công việc thực địa",
+        "summary__i18n__vi": "Hệ thống phun thông minh cho phun thuốc bảo vệ thực vật và rải phân bón trên quy mô lớn\nTối ưu lượng vật tư đầu vào và năng suất cây trồng",
+        "development_status": "pending"
+      }
+    }
+  ],
+  "records": [
+    {
+      "id": 240721106877456,
+      "uuid": "5fc811c7-c614-40d5-ba5e-2324a2d40d06",
+      "slug": "library/product-lines/line-03",
+      "content": {
+        "component": "product_line",
+        "content_id": "line-03",
+        "title": "Rescue & Emergency Delivery UAV",
+        "title__i18n__vi": "UAV Cứu hộ - Y tế",
+        "order": "3",
+        "summary": "Designed for medical services, emergency response, and transport of biological samples in remote, isolated, or complex environments.",
+        "summary__i18n__vi": "Thiết kế cho dịch vụ y tế, ứng phó khẩn cấp và vận chuyển mẫu sinh phẩm tại môi trường xa xôi, bị cô lập hoặc phức tạp.",
+        "review_state": "draft",
+        "ready_languages": [],
+        "route": "/applications/rescue-emergency-delivery-uav/"
+      }
+    },
+    {
+      "id": 240721108257809,
+      "uuid": "233a863a-af74-4f7a-80b9-2e681c448941",
+      "slug": "library/product-lines/line-05",
+      "content": {
+        "component": "product_line",
+        "content_id": "line-05",
+        "title": "Carbon Credit UAV",
+        "title__i18n__vi": "UAV Đánh giá tín chỉ carbon",
+        "order": "5",
+        "summary": "A specialized technology solution that supports Measurement, Reporting, and Verification for greenhouse-gas absorption and emissions-reduction projects.",
+        "summary__i18n__vi": "Giải pháp công nghệ chuyên biệt hỗ trợ Đo lường, Báo cáo và Thẩm định cho các dự án hấp thụ và giảm phát thải khí nhà kính.",
+        "review_state": "draft",
+        "ready_languages": [],
+        "route": "/applications/carbon-credit-uav/"
+      }
+    },
+    {
+      "id": 240721109388306,
+      "uuid": "28177bbd-cd02-4463-ad42-e4c35181290f",
+      "slug": "library/product-lines/line-09",
+      "content": {
+        "component": "product_line",
+        "content_id": "line-09",
+        "title": "Agricultural UAV",
+        "title__i18n__vi": "UAV Nông nghiệp",
+        "order": "9",
+        "summary": "Agricultural UAV solutions for automated spraying, fertilizer spreading, sowing, crop health monitoring, NDVI analysis, and field observation.",
+        "summary__i18n__vi": "Giải pháp UAV Nông nghiệp cho phun thuốc, bón phân, gieo hạt tự động, giám sát sức khỏe cây trồng, phân tích NDVI và quan sát đồng ruộng.",
+        "review_state": "draft",
+        "ready_languages": [],
+        "route": "/applications/agricultural-uav/"
+      }
+    },
+    {
+      "id": 240721110486035,
+      "uuid": "a897ad93-8530-4ea4-8fe8-0cfa94dbdd68",
+      "slug": "library/uav-products/decarb22",
+      "content": {
+        "component": "uav_product",
+        "content_id": "decarb22",
+        "title": "DECARB 22",
+        "model_code": "DECARB 22",
+        "summary": "Carbon MRV VTOL Surveyor",
+        "summary__i18n__vi": "UAV khảo sát VTOL MRV carbon",
+        "product_lines": [
+          "233a863a-af74-4f7a-80b9-2e681c448941"
+        ],
+        "review_state": "draft",
+        "ready_languages": [],
+        "route": "/products/decarb-22/",
+        "hero": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000001",
+            "component": "hero",
+            "kind": "video",
+            "media": "c7fc9189-15c4-418a-a770-a67a53e55f61",
+            "heading": "DECARB 22",
+            "description": "Carbon MRV VTOL Surveyor",
+            "description__i18n__vi": "UAV khảo sát VTOL MRV carbon",
+            "focal_x": "0.5",
+            "focal_y": "0.5"
+          }
+        ],
+        "presentation": "standard",
+        "applications_intro": "CT-DECARB supports MRV workflows for greenhouse-gas absorption, emissions reduction, and nature-based carbon projects.",
+        "applications_intro__i18n__vi": "CT-DECARB hỗ trợ quy trình MRV cho các dự án hấp thụ khí nhà kính, giảm phát thải và dự án carbon dựa vào thiên nhiên.",
+        "specifications": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000002",
+            "component": "specification",
+            "spec_key": "spec-000",
+            "label": "Max take-off weight",
+            "label__i18n__vi": "Trọng lượng cất cánh tối đa",
+            "value": "< 10 kg",
+            "display_value": "< 10 kg",
+            "display_value__i18n__vi": "< 10 kg"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000003",
+            "component": "specification",
+            "spec_key": "spec-001",
+            "label": "Payload capacity",
+            "label__i18n__vi": "Tải trọng",
+            "value": "2 kg",
+            "display_value": "2 kg",
+            "display_value__i18n__vi": "2 kg"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000004",
+            "component": "specification",
+            "spec_key": "spec-002",
+            "label": "Hovering time",
+            "label__i18n__vi": "Thời gian bay treo",
+            "value": "150+ minutes",
+            "display_value": "150+ minutes",
+            "display_value__i18n__vi": "150+ phút"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000005",
+            "component": "specification",
+            "spec_key": "spec-003",
+            "label": "Range",
+            "label__i18n__vi": "Tầm bay",
+            "value": "200 km",
+            "display_value": "200 km",
+            "display_value__i18n__vi": "200 km"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000006",
+            "component": "specification",
+            "spec_key": "spec-004",
+            "label": "Coverage per flight",
+            "label__i18n__vi": "Diện tích bao phủ mỗi chuyến bay",
+            "value": "400–500 ha (mapping)",
+            "display_value": "400–500 ha (mapping)",
+            "display_value__i18n__vi": "400–500 ha (lập bản đồ)"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000007",
+            "component": "specification",
+            "spec_key": "spec-005",
+            "label": "Mapping productivity",
+            "label__i18n__vi": "Năng suất lập bản đồ",
+            "value": "~1,200–1,500 ha/day",
+            "display_value": "~1,200–1,500 ha/day",
+            "display_value__i18n__vi": "~1.200–1.500 ha/ngày"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000008",
+            "component": "specification",
+            "spec_key": "spec-006",
+            "label": "Multispectral productivity",
+            "label__i18n__vi": "Năng suất đa phổ",
+            "value": "~900–1,200 ha/day",
+            "display_value": "~900–1,200 ha/day",
+            "display_value__i18n__vi": "~900–1.200 ha/ngày"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000009",
+            "component": "specification",
+            "spec_key": "spec-007",
+            "label": "RTK accuracy",
+            "label__i18n__vi": "Độ chính xác RTK",
+            "value": "cm-level (1–3 cm)",
+            "display_value": "cm-level (1–3 cm)",
+            "display_value__i18n__vi": "cấp cm (1–3 cm)"
+          }
+        ],
+        "story_sections": [],
+        "seo": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000010",
+            "component": "seo",
+            "title": "DECARB 22 | CT UAV",
+            "description": "Carbon MRV VTOL Surveyor"
+          }
+        ],
+        "applications": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000500",
+            "component": "ct_feature",
+            "title": "Vegetation data",
+            "description": "Vegetation biomass, NDVI, LAI, and related MRV indicators.",
+            "title__i18n__vi": "Dữ liệu thảm thực vật",
+            "description__i18n__vi": "Sinh khối thực vật, NDVI, LAI và các chỉ số MRV liên quan."
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000501",
+            "component": "ct_feature",
+            "title": "Land-use monitoring",
+            "description": "Changes in land use and vegetation over time.",
+            "title__i18n__vi": "Giám sát sử dụng đất",
+            "description__i18n__vi": "Biến động sử dụng đất và thảm thực vật theo thời gian."
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000502",
+            "component": "ct_feature",
+            "title": "Project documentation",
+            "description": "Mapping, multispectral surveys, and field data collection.",
+            "title__i18n__vi": "Tài liệu dự án",
+            "description__i18n__vi": "Lập bản đồ, khảo sát đa phổ và thu thập dữ liệu thực địa."
+          }
+        ],
+        "gallery": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000503",
+            "component": "media_placement",
+            "asset": "97343775-0cda-4312-9996-9784ba3e56e3",
+            "role": "gallery",
+            "alt_override": "DECARB 22 over terraced fields",
+            "alt_override__i18n__vi": "DECARB 22 bay trên ruộng bậc thang"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000504",
+            "component": "media_placement",
+            "asset": "c72485fe-7000-41ec-adf4-b1c8bf149344",
+            "role": "gallery",
+            "alt_override": "DECARB 22 forest and land survey application",
+            "alt_override__i18n__vi": "Ứng dụng khảo sát rừng và đất đai của DECARB 22"
+          }
+        ],
+        "technologies": [
+          "f7d20788-5ee2-48e5-aa0e-e98f8630e701"
+        ]
+      }
+    },
+    {
+      "id": 240721111645204,
+      "uuid": "c76d4194-ce71-409d-8b4a-33b996d887e9",
+      "slug": "library/uav-products/decarb54",
+      "content": {
+        "component": "uav_product",
+        "content_id": "decarb54",
+        "title": "DECARB 54",
+        "model_code": "DECARB 54",
+        "summary": "Carbon MRV multirotor",
+        "summary__i18n__vi": "UAV đa cánh quạt MRV carbon",
+        "product_lines": [
+          "233a863a-af74-4f7a-80b9-2e681c448941"
+        ],
+        "review_state": "draft",
+        "ready_languages": [],
+        "route": "/products/decarb-54/",
+        "hero": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000011",
+            "component": "hero",
+            "kind": "video",
+            "media": "4c42d2ff-2d37-478b-bb4f-20d1e63c6977",
+            "heading": "DECARB 54",
+            "description": "Carbon MRV multirotor",
+            "description__i18n__vi": "UAV đa cánh quạt MRV carbon",
+            "focal_x": "0.5",
+            "focal_y": "0.5"
+          }
+        ],
+        "presentation": "3d_story",
+        "applications_intro": "",
+        "specifications": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000012",
+            "component": "specification",
+            "spec_key": "spec-000",
+            "label": "Max take-off weight",
+            "label__i18n__vi": "Trọng lượng cất cánh tối đa",
+            "value": "11.4 kg",
+            "display_value": "11.4 kg",
+            "display_value__i18n__vi": "11.4 kg"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000013",
+            "component": "specification",
+            "spec_key": "spec-001",
+            "label": "Payload capacity",
+            "label__i18n__vi": "Tải trọng",
+            "value": "5 kg",
+            "display_value": "5 kg",
+            "display_value__i18n__vi": "5 kg"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000014",
+            "component": "specification",
+            "spec_key": "spec-002",
+            "label": "Hovering time",
+            "label__i18n__vi": "Thời gian bay treo",
+            "value": "60 minutes",
+            "display_value": "60 minutes",
+            "display_value__i18n__vi": "60 phút"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000015",
+            "component": "specification",
+            "spec_key": "spec-003",
+            "label": "Range",
+            "label__i18n__vi": "Tầm bay",
+            "value": "200 km",
+            "display_value": "200 km",
+            "display_value__i18n__vi": "200 km"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000016",
+            "component": "specification",
+            "spec_key": "spec-004",
+            "label": "Coverage per flight",
+            "label__i18n__vi": "Diện tích bao phủ mỗi chuyến bay",
+            "value": "~50 ha (mapping)",
+            "display_value": "~50 ha (mapping)",
+            "display_value__i18n__vi": "~50 ha (lập bản đồ)"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000017",
+            "component": "specification",
+            "spec_key": "spec-005",
+            "label": "Mapping productivity",
+            "label__i18n__vi": "Năng suất lập bản đồ",
+            "value": "~200–250 ha/day",
+            "display_value": "~200–250 ha/day",
+            "display_value__i18n__vi": "~200–250 ha/ngày"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000018",
+            "component": "specification",
+            "spec_key": "spec-006",
+            "label": "Multispectral productivity",
+            "label__i18n__vi": "Năng suất đa phổ",
+            "value": "~160–200 ha/day",
+            "display_value": "~160–200 ha/day",
+            "display_value__i18n__vi": "~160–200 ha/ngày"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000019",
+            "component": "specification",
+            "spec_key": "spec-007",
+            "label": "RTK accuracy",
+            "label__i18n__vi": "Độ chính xác RTK",
+            "value": "cm-level (1–3 cm)",
+            "display_value": "cm-level (1–3 cm)",
+            "display_value__i18n__vi": "cấp cm (1–3 cm)"
+          }
+        ],
+        "story_sections": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000020",
+            "component": "story_section",
+            "section_key": "chapter-0",
+            "heading": "Carbon MRV multirotor",
+            "heading__i18n__vi": "UAV đa cánh quạt MRV carbon",
+            "body": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "01 / OVERVIEW"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "kg"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Payload capacity"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "DECARB 54 flies low and follows the terrain. It supports carbon MRV work on small and medium sites where a fixed-wing UAV is not practical."
+                    }
+                  ]
+                }
+              ]
+            },
+            "azimuth": "35",
+            "elevation": "18",
+            "zoom": "1",
+            "target_x": "0",
+            "target_y": "0",
+            "target_z": "0",
+            "image": "23aa9e32-9c36-430e-9a0d-aab29fb6d433",
+            "body__i18n__vi": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "01 / TỔNG QUAN"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "5"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "kg"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Tải trọng"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "DECARB 54 bay thấp và bám theo địa hình. UAV hỗ trợ công tác MRV carbon tại các khu vực nhỏ và vừa, nơi UAV cánh cố định không phù hợp."
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000021",
+            "component": "story_section",
+            "section_key": "chapter-1",
+            "heading": "Mapping coverage per flight",
+            "heading__i18n__vi": "Diện tích lập bản đồ mỗi chuyến bay",
+            "body": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "02 / COVERAGE"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "~50"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "ha"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Mapping productivity"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "~200–250 ha/day"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Multispectral productivity"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "~160–200 ha/day"
+                    }
+                  ]
+                }
+              ]
+            },
+            "azimuth": "90",
+            "elevation": "4",
+            "zoom": "1",
+            "target_x": "0",
+            "target_y": "0",
+            "target_z": "0",
+            "image": "23aa9e32-9c36-430e-9a0d-aab29fb6d433",
+            "body__i18n__vi": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "02 / PHẠM VI BAO PHỦ"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "~50"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "ha"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Năng suất lập bản đồ"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "~200–250 ha/ngày"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Năng suất đa phổ"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "~160–200 ha/ngày"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000022",
+            "component": "story_section",
+            "section_key": "chapter-2",
+            "heading": "Hovering time",
+            "heading__i18n__vi": "Thời gian bay treo",
+            "body": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "03 / ENDURANCE"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "60"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "min"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Max take-off weight"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "11.4 kg"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "RTK accuracy"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "cm-level (1–3 cm)"
+                    }
+                  ]
+                }
+              ]
+            },
+            "azimuth": "20",
+            "elevation": "70",
+            "zoom": "1",
+            "target_x": "0",
+            "target_y": "0",
+            "target_z": "0",
+            "image": "23aa9e32-9c36-430e-9a0d-aab29fb6d433",
+            "body__i18n__vi": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "03 / THỜI GIAN BAY"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "60"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "min"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Trọng lượng cất cánh tối đa"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "11.4 kg"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Độ chính xác RTK"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "cấp cm (1–3 cm)"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000023",
+            "component": "story_section",
+            "section_key": "chapter-3",
+            "heading": "Carbon data in complex terrain",
+            "heading__i18n__vi": "Dữ liệu carbon tại địa hình phức tạp",
+            "body": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "04 / APPLICATIONS"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Mountains and complex terrain"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Low flight that follows the terrain at a consistent altitude: steep slopes, mountain forests, and narrow valleys."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Small and medium sites"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Forests or farms smaller than 200–250 ha need only one or two flights per site."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Credits and ground truth"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Credits for small forests, farms, and agroforestry, and ground-truth sampling with multispectral imaging for small plots."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Payload options"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "↗"
+                    }
+                  ]
+                }
+              ]
+            },
+            "azimuth": "4",
+            "elevation": "6",
+            "zoom": "1.05",
+            "target_x": "0",
+            "target_y": "0",
+            "target_z": "0",
+            "image": "23aa9e32-9c36-430e-9a0d-aab29fb6d433",
+            "body__i18n__vi": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "04 / ỨNG DỤNG"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Vùng núi và địa hình phức tạp"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Bay thấp bám theo địa hình ở độ cao ổn định: sườn dốc, rừng núi và thung lũng hẹp."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Khu vực vừa và nhỏ"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Rừng hoặc trang trại có diện tích dưới 200–250 ha chỉ cần một hoặc hai chuyến bay cho mỗi khu vực."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Tín chỉ và dữ liệu thực địa"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Tín chỉ cho rừng nhỏ, trang trại và nông lâm kết hợp, cùng lấy mẫu thực địa bằng ảnh đa phổ cho các lô đất nhỏ."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Tùy chọn tải trọng"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "↗"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000024",
+            "component": "story_section",
+            "section_key": "chapter-4",
+            "heading": "Built for difficult survey sites",
+            "heading__i18n__vi": "Thiết kế cho địa bàn khảo sát khó khăn",
+            "body": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "05 / TECHNOLOGY"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Quick direction changes around tall trees, power lines, and substations"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Stable low-speed flight in gusty or shifting winds"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Take-off and landing in small zones, urban areas, and fenced sites"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "RTK positioning with cm-level (1–3 cm) accuracy"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "3D view of the CT UAV 3D design model. Colours and small parts can be different on the delivered UAV."
+                    }
+                  ]
+                }
+              ]
+            },
+            "azimuth": "32",
+            "elevation": "8",
+            "zoom": ".76",
+            "target_x": "0",
+            "target_y": "-.15",
+            "target_z": ".3",
+            "image": "23aa9e32-9c36-430e-9a0d-aab29fb6d433",
+            "body__i18n__vi": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "05 / CÔNG NGHỆ"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Đổi hướng nhanh quanh cây cao, đường dây điện và trạm biến áp"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Bay ổn định ở tốc độ thấp khi gió giật hoặc đổi hướng"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Cất hạ cánh tại khu vực hẹp, đô thị và khu có rào chắn"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Định vị RTK với độ chính xác cấp cm (1–3 cm)"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Chế độ xem 3D của mô hình thiết kế 3D CT UAV. Màu sắc và các chi tiết nhỏ có thể khác với UAV khi bàn giao."
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "model": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000025",
+            "component": "model_view",
+            "asset": "cd7159b9-6559-4a5c-8d21-274bbfd28678",
+            "poster": "23aa9e32-9c36-430e-9a0d-aab29fb6d433",
+            "front_degrees": "0",
+            "scale": "1"
+          }
+        ],
+        "seo": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000026",
+            "component": "seo",
+            "title": "DECARB 54 | CT UAV",
+            "description": "Carbon MRV multirotor"
+          }
+        ],
+        "applications": [],
+        "gallery": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000505",
+            "component": "media_placement",
+            "asset": "c932ba16-00aa-4be4-b436-4088177afc5f",
+            "role": "gallery",
+            "alt_override": "DECARB 54 multirotor over a coastline",
+            "alt_override__i18n__vi": "DECARB 54 đa cánh quạt bay trên bờ biển"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000506",
+            "component": "media_placement",
+            "asset": "23aa9e32-9c36-430e-9a0d-aab29fb6d433",
+            "role": "gallery",
+            "alt_override": "DECARB 54 multirotor over a forest canopy",
+            "alt_override__i18n__vi": "DECARB 54 đa cánh quạt bay trên tán rừng"
+          }
+        ]
+      }
+    },
+    {
+      "id": 240721112878101,
+      "uuid": "d217411e-5612-4143-af89-408e58db1dcf",
+      "slug": "library/uav-products/ct-crova-254",
+      "content": {
+        "component": "uav_product",
+        "content_id": "ct-crova-254",
+        "title": "CT-CROVA 254",
+        "model_code": "CT-CROVA 254",
+        "summary": "Agricultural spraying UAV",
+        "summary__i18n__vi": "UAV phun thuốc nông nghiệp",
+        "product_lines": [
+          "28177bbd-cd02-4463-ad42-e4c35181290f"
+        ],
+        "review_state": "draft",
+        "ready_languages": [],
+        "route": "/products/ct-crova-254/",
+        "hero": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000027",
+            "component": "hero",
+            "kind": "image",
+            "media": "e47c71fe-19b6-4ac0-bb44-b3afa4aa5ba3",
+            "heading": "CT-CROVA 254",
+            "description": "Agricultural spraying UAV",
+            "description__i18n__vi": "UAV phun thuốc nông nghiệp",
+            "focal_x": "0.5",
+            "focal_y": "0.5"
+          }
+        ],
+        "presentation": "standard",
+        "applications_intro": "CT-CROVA supports spraying, fertilizer spreading, sowing, and crop monitoring.",
+        "applications_intro__i18n__vi": "CT-CROVA hỗ trợ phun thuốc, rải phân bón, gieo hạt và giám sát cây trồng.",
+        "specifications": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000028",
+            "component": "specification",
+            "spec_key": "spec-000",
+            "label": "Materials",
+            "label__i18n__vi": "Vật liệu",
+            "value": "Aluminum, Carbon Fiber, PETG-CF, Rubber",
+            "display_value": "Aluminum, Carbon Fiber, PETG-CF, Rubber",
+            "display_value__i18n__vi": "Nhôm, sợi carbon, PETG-CF, cao su"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000029",
+            "component": "specification",
+            "spec_key": "spec-001",
+            "label": "Dimensions",
+            "label__i18n__vi": "Kích thước",
+            "value": "Unfolded: 3800 x 3800 x 670 mm; Folded: 980 x 700 x 670 mm",
+            "display_value": "Unfolded: 3800 x 3800 x 670 mm; Folded: 980 x 700 x 670 mm",
+            "display_value__i18n__vi": "Khi mở: 3800 x 3800 x 670 mm; Khi gập: 980 x 700 x 670 mm"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000030",
+            "component": "specification",
+            "spec_key": "spec-002",
+            "label": "Payload capacity",
+            "label__i18n__vi": "Tải trọng",
+            "value": "25 kg",
+            "display_value": "25 kg",
+            "display_value__i18n__vi": "25 kg"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000031",
+            "component": "specification",
+            "spec_key": "spec-003",
+            "label": "Weight",
+            "label__i18n__vi": "Trọng lượng",
+            "value": "65.2 kg",
+            "display_value": "65.2 kg",
+            "display_value__i18n__vi": "65.2 kg"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000032",
+            "component": "specification",
+            "spec_key": "spec-004",
+            "label": "Operating duration",
+            "label__i18n__vi": "Thời gian hoạt động",
+            "value": "No load: 45 minutes; Full load: 20 minutes",
+            "display_value": "No load: 45 minutes; Full load: 20 minutes",
+            "display_value__i18n__vi": "Không tải: 45 phút; Tải đầy: 20 phút"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000033",
+            "component": "specification",
+            "spec_key": "spec-005",
+            "label": "Flight speed",
+            "label__i18n__vi": "Tốc độ bay",
+            "value": "7–10 m/s",
+            "display_value": "7–10 m/s",
+            "display_value__i18n__vi": "7–10 m/s"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000034",
+            "component": "specification",
+            "spec_key": "spec-006",
+            "label": "Height",
+            "label__i18n__vi": "Độ cao bay",
+            "value": "4000 m (wind resistance level 6)",
+            "display_value": "4000 m (wind resistance level 6)",
+            "display_value__i18n__vi": "4000 m (kháng gió cấp 6)"
+          }
+        ],
+        "story_sections": [],
+        "seo": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000035",
+            "component": "seo",
+            "title": "CT-CROVA 254 | CT UAV",
+            "description": "Agricultural spraying UAV"
+          }
+        ],
+        "applications": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000507",
+            "component": "ct_feature",
+            "title": "Spraying and spreading",
+            "description": "Automatic pesticide spraying, fertilizer spreading, and sowing based on GPS coordinates.",
+            "title__i18n__vi": "Phun và rải",
+            "description__i18n__vi": "Tự động phun thuốc bảo vệ thực vật, bón phân và gieo hạt theo tọa độ GPS."
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000508",
+            "component": "ct_feature",
+            "title": "Crop health",
+            "description": "Multispectral monitoring of growth, pests, water shortage, and nutrient deficiencies.",
+            "title__i18n__vi": "Sức khỏe cây trồng",
+            "description__i18n__vi": "Giám sát đa phổ về sinh trưởng, sâu bệnh, tình trạng thiếu nước và thiếu dinh dưỡng."
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000509",
+            "component": "ct_feature",
+            "title": "NDVI analysis",
+            "description": "NDVI data to assess plant health by region.",
+            "title__i18n__vi": "Phân tích NDVI",
+            "description__i18n__vi": "Dữ liệu NDVI để đánh giá sức khỏe cây trồng theo từng khu vực."
+          }
+        ],
+        "gallery": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000510",
+            "component": "media_placement",
+            "asset": "e47c71fe-19b6-4ac0-bb44-b3afa4aa5ba3",
+            "role": "gallery",
+            "alt_override": "Agricultural UAV spraying a green field",
+            "alt_override__i18n__vi": "UAV Nông nghiệp phun thuốc trên cánh đồng xanh"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000511",
+            "component": "media_placement",
+            "asset": "d21d2be1-795b-458a-b414-9a5e7a547a62",
+            "role": "gallery",
+            "alt_override": "CT-CROVA 254 model image",
+            "alt_override__i18n__vi": "Hình ảnh mẫu máy CT-CROVA 254"
+          }
+        ],
+        "technologies": [
+          "2428de70-5497-4c19-9deb-dd1592dae865"
+        ]
+      }
+    },
+    {
+      "id": 240721114180630,
+      "uuid": "c4696363-1041-4167-a9e9-782a1a5a4d89",
+      "slug": "library/uav-products/ct-pegas-230",
+      "content": {
+        "component": "uav_product",
+        "content_id": "ct-pegas-230",
+        "title": "CT-PEGAS 230",
+        "model_code": "CT-PEGAS 230",
+        "summary": "Emergency delivery heavy-lift",
+        "summary__i18n__vi": "UAV hạng nặng giao hàng khẩn cấp",
+        "product_lines": [
+          "5fc811c7-c614-40d5-ba5e-2324a2d40d06"
+        ],
+        "review_state": "draft",
+        "ready_languages": [],
+        "route": "/products/ct-pegas-230/",
+        "hero": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000036",
+            "component": "hero",
+            "kind": "image",
+            "media": "9c20a68e-2af4-4a59-95f3-0045d3f00aaa",
+            "heading": "CT-PEGAS 230",
+            "description": "Emergency delivery heavy-lift",
+            "description__i18n__vi": "UAV hạng nặng giao hàng khẩn cấp",
+            "focal_x": "0.5",
+            "focal_y": "0.5"
+          }
+        ],
+        "presentation": "3d_story",
+        "applications_intro": "",
+        "specifications": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000037",
+            "component": "specification",
+            "spec_key": "spec-000",
+            "label": "Body frame",
+            "label__i18n__vi": "Khung thân",
+            "value": "Aluminum, Carbon Fiber, PETG-CF, Rubber",
+            "display_value": "Aluminum, Carbon Fiber, PETG-CF, Rubber",
+            "display_value__i18n__vi": "Nhôm, sợi carbon, PETG-CF, cao su"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000038",
+            "component": "specification",
+            "spec_key": "spec-001",
+            "label": "Max take-off weight",
+            "label__i18n__vi": "Trọng lượng cất cánh tối đa",
+            "value": "230 kg",
+            "display_value": "230 kg",
+            "display_value__i18n__vi": "230 kg"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000039",
+            "component": "specification",
+            "spec_key": "spec-002",
+            "label": "Payload capacity",
+            "label__i18n__vi": "Tải trọng",
+            "value": "100 kg max",
+            "display_value": "100 kg max",
+            "display_value__i18n__vi": "Tối đa 100 kg"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000040",
+            "component": "specification",
+            "spec_key": "spec-003",
+            "label": "Image transmission",
+            "label__i18n__vi": "Truyền hình ảnh",
+            "value": "30 km",
+            "display_value": "30 km",
+            "display_value__i18n__vi": "30 km"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000041",
+            "component": "specification",
+            "spec_key": "spec-004",
+            "label": "Hovering time",
+            "label__i18n__vi": "Thời gian bay treo",
+            "value": "No load: 42 minutes; Full load: 17 minutes",
+            "display_value": "No load: 42 minutes; Full load: 17 minutes",
+            "display_value__i18n__vi": "Không tải: 42 phút; Tải đầy: 17 phút"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000042",
+            "component": "specification",
+            "spec_key": "spec-005",
+            "label": "Wind resistance level",
+            "label__i18n__vi": "Cấp kháng gió",
+            "value": "< 13.8 m/s (level 6)",
+            "display_value": "< 13.8 m/s (level 6)",
+            "display_value__i18n__vi": "< 13.8 m/s (cấp 6)"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000043",
+            "component": "specification",
+            "spec_key": "spec-006",
+            "label": "Number of rotors",
+            "label__i18n__vi": "Số cánh quạt",
+            "value": "6 rotors (63 inch)",
+            "display_value": "6 rotors (63 inch)",
+            "display_value__i18n__vi": "6 cánh quạt (63 inch)"
+          }
+        ],
+        "story_sections": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000044",
+            "component": "story_section",
+            "section_key": "chapter-0",
+            "heading": "Emergency delivery heavy-lift",
+            "heading__i18n__vi": "UAV hạng nặng giao hàng khẩn cấp",
+            "body": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "01 / OVERVIEW"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "100"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "kg"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "max"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Payload capacity"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "CT-PEGAS supports medical delivery, rescue logistics, and emergency response in remote areas and complex terrain."
+                    }
+                  ]
+                }
+              ]
+            },
+            "azimuth": "35",
+            "elevation": "16",
+            "zoom": "1",
+            "target_x": "0",
+            "target_y": "0",
+            "target_z": "0",
+            "image": "9c20a68e-2af4-4a59-95f3-0045d3f00aaa",
+            "body__i18n__vi": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "01 / TỔNG QUAN"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "100"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "kg"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Tối đa"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Tải trọng"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "CT-PEGAS hỗ trợ vận chuyển y tế, tiếp vận cứu hộ và ứng phó khẩn cấp tại vùng sâu, vùng xa và địa hình phức tạp."
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000045",
+            "component": "story_section",
+            "section_key": "chapter-1",
+            "heading": "Max take-off weight",
+            "heading__i18n__vi": "Trọng lượng cất cánh tối đa",
+            "body": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "02 / LIFT"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "230"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "kg"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Number of rotors"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "6 rotors (63 inch)"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Body frame"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Aluminum, Carbon Fiber, PETG-CF, Rubber"
+                    }
+                  ]
+                }
+              ]
+            },
+            "azimuth": "90",
+            "elevation": "4",
+            "zoom": "1",
+            "target_x": "0",
+            "target_y": "0",
+            "target_z": "0",
+            "image": "9c20a68e-2af4-4a59-95f3-0045d3f00aaa",
+            "body__i18n__vi": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "02 / SỨC NÂNG"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "230"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "kg"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Số cánh quạt"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "6 cánh quạt (63 inch)"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Khung thân"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Nhôm, sợi carbon, PETG-CF, cao su"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000046",
+            "component": "story_section",
+            "section_key": "chapter-2",
+            "heading": "Image transmission",
+            "heading__i18n__vi": "Truyền hình ảnh",
+            "body": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "03 / ENDURANCE"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "30"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "km"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Hovering time"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "No load"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "42 minutes"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Full load"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "17 minutes"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Wind resistance level"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "< 13.8 m/s (level 6)"
+                    }
+                  ]
+                }
+              ]
+            },
+            "azimuth": "20",
+            "elevation": "70",
+            "zoom": "1",
+            "target_x": "0",
+            "target_y": "0",
+            "target_z": "0",
+            "image": "9c20a68e-2af4-4a59-95f3-0045d3f00aaa",
+            "body__i18n__vi": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "03 / THỜI GIAN BAY"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "30"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "km"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Thời gian bay treo"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Không tải"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "42 phút"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Tải đầy"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "17 phút"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Cấp kháng gió"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "< 13.8 m/s (cấp 6)"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000047",
+            "component": "story_section",
+            "section_key": "chapter-3",
+            "heading": "Fast help in an emergency",
+            "heading__i18n__vi": "Hỗ trợ nhanh trong tình huống khẩn cấp",
+            "body": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "04 / APPLICATIONS"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Medical supplies"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Delivery of essential biomedical supplies."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Rescue logistics"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Faster rescue and medical logistics, with a real-time remote medical connection."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Disinfection"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Active disinfection spraying in high-risk areas."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Payload options"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "↗"
+                    }
+                  ]
+                }
+              ]
+            },
+            "azimuth": "4",
+            "elevation": "6",
+            "zoom": "1.05",
+            "target_x": "0",
+            "target_y": "0",
+            "target_z": "0",
+            "image": "9c20a68e-2af4-4a59-95f3-0045d3f00aaa",
+            "body__i18n__vi": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "04 / ỨNG DỤNG"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Vật tư y tế"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Vận chuyển nguồn lực y sinh thiết yếu."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Tiếp vận cứu hộ"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Cứu hộ và vận chuyển y tế nhanh hơn, với kết nối y tế từ xa theo thời gian thực."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Khử khuẩn"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Phun khử khuẩn chủ động tại khu vực có nguy cơ cao."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Tùy chọn tải trọng"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "↗"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000048",
+            "component": "story_section",
+            "section_key": "chapter-4",
+            "heading": "Built for emergency work",
+            "heading__i18n__vi": "Thiết kế cho nhiệm vụ khẩn cấp",
+            "body": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "05 / TECHNOLOGY"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Integrated 4K AI camera design"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Remote monitoring camera for remote first-aid support"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "High-precision positioning system"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Sensors for monitoring transport conditions and autonomous flight capability"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "3D view of the CT UAV 3D design model. Colours and small parts can be different on the delivered UAV."
+                    }
+                  ]
+                }
+              ]
+            },
+            "azimuth": "38",
+            "elevation": "10",
+            "zoom": ".76",
+            "target_x": "0",
+            "target_y": "-.25",
+            "target_z": "0",
+            "image": "9c20a68e-2af4-4a59-95f3-0045d3f00aaa",
+            "body__i18n__vi": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "05 / CÔNG NGHỆ"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Thiết kế tích hợp camera AI 4K"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Camera giám sát từ xa hỗ trợ sơ cứu từ xa"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Hệ thống định vị chính xác cao"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Cảm biến theo dõi điều kiện vận chuyển và khả năng bay tự động"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Chế độ xem 3D của mô hình thiết kế 3D CT UAV. Màu sắc và các chi tiết nhỏ có thể khác với UAV khi bàn giao."
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "model": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000049",
+            "component": "model_view",
+            "asset": "69bab99f-5768-4271-baf4-0b02538014b2",
+            "poster": "9c20a68e-2af4-4a59-95f3-0045d3f00aaa",
+            "front_degrees": "90",
+            "scale": "1"
+          }
+        ],
+        "seo": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000050",
+            "component": "seo",
+            "title": "CT-PEGAS 230 | CT UAV",
+            "description": "Emergency delivery heavy-lift"
+          }
+        ],
+        "applications": [],
+        "gallery": [
+          {
+            "_uid": "00000000-0000-4000-8000-000000000512",
+            "component": "media_placement",
+            "asset": "98ca6bf7-d7aa-4687-ade1-ff78eed2b000",
+            "role": "gallery",
+            "alt_override": "Rescue UAV carrying a supply box over a flooded area",
+            "alt_override__i18n__vi": "UAV cứu hộ chở thùng vật tư bay qua vùng ngập lụt"
+          },
+          {
+            "_uid": "00000000-0000-4000-8000-000000000513",
+            "component": "media_placement",
+            "asset": "6765b457-aec0-4063-90c0-c10db1792415",
+            "role": "gallery",
+            "alt_override": "Rescue UAV spraying disinfectant in a narrow street",
+            "alt_override__i18n__vi": "UAV cứu hộ phun khử khuẩn trong hẻm nhỏ"
+          }
+        ]
+      }
+    }
+  ]
+}

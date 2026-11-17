@@ -1,0 +1,5 @@
+beautifulsoup4==4.15.0
+rjsmin==1.3.0
+# Transitive dependencies of beautifulsoup4, pinned for repeatable preview builds.
+soupsieve==2.10
+typing_extensions==4.15.0

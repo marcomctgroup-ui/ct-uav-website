@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+staging/dist/
+staging/checks/

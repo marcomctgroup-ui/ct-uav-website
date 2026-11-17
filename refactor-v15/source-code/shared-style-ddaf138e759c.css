@@ -1,0 +1,7 @@
+
+/* Glass 3D v04 r03, R4-01 (27 Oct): on product pages the Navbar slides up while the hero is on screen, and comes
+   back after the hero. The page frame then uses the full screen height. */
+#globalHeader { transition: transform .5s cubic-bezier(.2, .7, .2, 1); }
+html.nav-hero-hidden #globalHeader { transform: translateY(-100%); }
+#content > .page-frame.product-frame { top: 0; height: 100%; } /* the Navbar lies over the frame; the frame does not change size */
+@media (prefers-reduced-motion: reduce) { #globalHeader { transition: none; } }

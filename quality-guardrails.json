@@ -1,0 +1,88 @@
+{
+  "_about": "Measured limits for the main website demo. Rules and reasons: QUALITY-GUARDRAILS.md. Change a limit only when Haykal approves it, and record the change in that file.",
+  "version": "v02",
+  "date": "2026-10-22",
+  "widths": [
+    1440,
+    768,
+    390
+  ],
+  "full_widths": [
+    1440,
+    1024,
+    768,
+    390,
+    320
+  ],
+  "phone_max_width": 480,
+  "min_text_px": {
+    "desktop": 14,
+    "phone": 13
+  },
+  "min_button_text_px": {
+    "desktop": 14,
+    "phone": 13
+  },
+  "min_target_px": {
+    "fail": 36,
+    "warn": 44
+  },
+  "min_element_opacity": 0.78,
+  "contrast": {
+    "fail_below": 3.0,
+    "warn_below_normal": 4.5,
+    "warn_below_large": 3.0,
+    "large_px": 24,
+    "large_bold_px": 18.6
+  },
+  "dark": {
+    "luminance_below": 0.2,
+    "min_alpha": 0.35,
+    "min_area_px2": 600
+  },
+  "required_font": "Montserrat",
+  "settle_ms": 1600,
+  "state_wait_ms": 900,
+  "ignore_selectors": [
+    ".review-bar"
+  ],
+  "approved_dark_exceptions": [
+    ".bar-contact:hover",
+    ".applications-actions .payload-open:hover",
+    ".payload-contact:hover",
+    ".site-footer__social a"
+  ],
+  "states": [
+    {
+      "name": "products-dropdown",
+      "click": "#productsToggle"
+    },
+    {
+      "name": "payload-dialog",
+      "click": "[data-payload-open]"
+    },
+    {
+      "name": "planned-page-message",
+      "click": "[data-contact]"
+    }
+  ],
+  "themes": [
+    "mono",
+    "orange",
+    "blue"
+  ],
+  "approved_exceptions": [
+    {
+      "name": "v05 Home hero (Hero v03)",
+      "frame": "#heroFrame",
+      "file": "components/hero/2026-10-14-main-website-hero-v03.html",
+      "rules": [
+        "G1",
+        "G2"
+      ],
+      "approved_by": "Haykal",
+      "date": "2026-10-22",
+      "reason": "Haykal kept the v05 hero look: dark photo gradient, #243026 base, and 10-13 px slide labels."
+    }
+  ]
+}

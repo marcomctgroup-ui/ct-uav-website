@@ -1,0 +1,8 @@
+Tool: built-in imagegen. Transparent background: true.
+One call per component view. Inputs and tool source output paths: ../checks/cutout-generation.json.
+
+Edit target: supplied CT UAV component product photo, {model}, view {view}. Perform background removal ONLY. Make the entire photographic backdrop, grey glow, floor and mirrored floor reflection transparent. Retain exactly the original physical product in exactly its original position, scale, perspective and shape, with all real black materials, carbon weave, metal shafts, mounting holes, highlights and printed labels unchanged. Do not redraw, relight, invent, simplify or change any product detail. Do not remove black product surfaces. Preserve the complete product outline, thin propeller edges and holes. Keep original canvas dimensions. Clean alpha edges without a white/black halo. Output a transparent-background cutout asset for the website.
+
+Substitutions: 3530/view 1; 4120/view 1; CT-P2×6.6/view 1; CT-P2×6.6/view 2.
+The tool outputs were copied without changes into this folder. Delivery WebP copies retain alpha.
+All four cutouts were compared to the supplied original images on light surfaces. They are generated derivatives, not pixel-identical extractions. Human product identity and public-release approval remain pending.

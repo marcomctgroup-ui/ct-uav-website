@@ -1,0 +1,158 @@
+
+/* CT-ENCY-CSS-START
+   CT Ency chatbot v08 (2 November 2026): v07 with the 3D CT Ency mascot (Haykal, 2 Nov 2026) and the brand-blue
+   launcher (CT UAV management feedback, 2 Nov 2026). Design otherwise v07 / v06 (v03 colours, Haykal's rounds 2 and 3).
+   Every selector starts with .cu-widget, so the chatbot cannot change a website style. Colours are custom
+   properties in this one block. Palettes: data-palette on the widget, or [data-theme] on the page when the widget
+   is not embedded (the website keeps the v03 blue chat look). Chatbot exempt from the website size limits
+   (Haykal, 2 Nov 2026); contrast, keyboard access and reduced motion stay. No dark surfaces. */
+.cu-widget{
+  --cu-ink:#172127;--cu-muted:#667780;--cu-faint:#8a979d;
+  --cu-blue:#268fca;--cu-blue-deep:#197db7;--cu-blue-pale:#e9f5fb;
+  --cu-soft:#f4f7f8;--cu-border:#dfe7ea;--cu-card:#ffffff;
+  --cu-accent-shadow:rgba(38,143,202,.22);
+  --cu-blue-text:#17628f;--cu-body:#273740;--cu-quiet:#5b6f79;
+  --cu-user-bg:#e7f4fa;--cu-user-ink:#1e4c66;--cu-bot-bg:#f2f6f7;
+  --cu-send:#268fca;
+  --cu-launcher:#1B86C8;--cu-launcher-ring:#0f4f78;
+  --cu-r-s:10px;--cu-r-m:18px;--cu-r-l:24px;--cu-r-pill:999px;
+  --cu-ease:cubic-bezier(.22,.61,.36,1);
+}
+.cu-widget[data-palette="mono"],[data-theme="mono"] .cu-widget:not([data-embedded]){
+  --cu-blue:#407d9b;--cu-blue-deep:#285e7a;--cu-blue-pale:#eef5f7;--cu-accent-shadow:rgba(64,125,155,.18);
+  --cu-blue-text:#285e7a;--cu-user-bg:#eef5f7;--cu-user-ink:#23495d;--cu-send:#5a8fa8;
+}
+.cu-widget[data-palette="orange"],[data-theme="orange"] .cu-widget:not([data-embedded]){
+  --cu-blue:#c87d29;--cu-blue-deep:#9e5c17;--cu-blue-pale:#fff3e4;--cu-accent-shadow:rgba(200,125,41,.20);
+  --cu-blue-text:#8a5014;--cu-user-bg:#fff3e4;--cu-user-ink:#6e430f;--cu-send:#c87d29;
+}
+
+.cu-widget{position:fixed;inset:0;z-index:100;pointer-events:none;font:400 14px/1.55 Montserrat,Arial,sans-serif;color:var(--cu-ink);letter-spacing:normal;text-align:left;text-transform:none}
+.cu-widget,.cu-widget *,.cu-widget *::before,.cu-widget *::after{box-sizing:border-box}
+.cu-widget [hidden]{display:none!important}
+/* Neutral base for every element inside the chatbot (specificity 0,1,0; the class rules below win). */
+.cu-widget :where(section,article,header,form,div,p,h1,ul,li,span,strong,small,a,button,textarea){margin:0;padding:0;border:0;font:inherit;letter-spacing:inherit;text-transform:none;text-decoration:none;background:none;box-shadow:none;color:inherit}
+.cu-widget :where(button,a,textarea){-webkit-tap-highlight-color:transparent}
+.cu-widget :where(button){cursor:pointer;color:var(--cu-ink)}
+.cu-widget button:focus-visible,.cu-widget a:focus-visible,.cu-widget textarea:focus-visible{outline:2px solid var(--cu-blue);outline-offset:2px}
+.cu-widget svg{flex:none;display:block}
+
+/* Mascot mounts. The inline 3D mascot engine fills each .ce-mascot (one shared WebGL renderer). Until the first
+   3D frame, and when WebGL fails, a pre-rendered poster shows. "CE" shows only if the poster also fails. */
+.cu-widget .ce-mascot{position:relative;flex:none}
+.cu-widget .ce-mascot__fallback{position:absolute;inset:0;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,#f7fdff,var(--cu-blue-pale));border:1px solid var(--cu-border);color:var(--cu-blue-text);font-size:13px;font-weight:600;line-height:1}
+.cu-widget .ce-mascot--xl{width:110px;height:110px}
+.cu-widget .ce-mascot--xl .ce-mascot__fallback{font-size:26px}
+.cu-widget .ce-mascot--launcher{width:56px;height:56px}
+.cu-widget .ce-mascot--launcher .ce-mascot__fallback{font-size:17px}
+.cu-widget .ce-mascot--chat{width:76px;height:76px}
+.cu-widget .ce-mascot--chat .ce-mascot__fallback{font-size:22px}
+
+/* Launcher: icon only, round, light. Hidden while the panel is open (Haykal: "Hide when open"). */
+/* v08: brand-blue circle (#1B86C8, CT UAV management feedback) with the mascot inside, soft shadow, and a
+   two-tone focus ring (white gap + deep-blue ring) that shows on light pages and on the blue fill. */
+.cu-widget .cu-launcher{position:fixed;right:26px;bottom:24px;display:grid;place-items:center;width:66px;height:66px;padding:0;pointer-events:auto;border:0;border-radius:50%;background:var(--cu-launcher);box-shadow:0 8px 24px rgba(27,134,200,.34),0 2px 8px rgba(15,41,54,.12);transition:box-shadow .3s var(--cu-ease)}
+.cu-widget .cu-launcher:hover{box-shadow:0 10px 30px rgba(27,134,200,.42),0 2px 8px rgba(15,41,54,.14)}
+.cu-widget .cu-launcher:focus-visible{outline:3px solid var(--cu-launcher-ring);outline-offset:3px;box-shadow:0 0 0 3px #fff,0 8px 24px rgba(27,134,200,.34)}
+.cu-widget .cu-launcher .ce-mascot__fallback{background:#fff}
+.cu-widget .cu-launcher .ce-mascot__poster,.cu-widget .cu-launcher .ce-mascot__canvas{left:-8%;top:-8%;width:116%;height:116%}
+.cu-widget.cu-open .cu-launcher{display:none}
+.cu-widget .cu-launcher{transition:box-shadow .3s var(--cu-ease),bottom .4s var(--cu-ease)}
+.cu-widget[data-menu="open"] .cu-launcher{display:none}
+.cu-widget[data-modal="open"] .cu-launcher{display:none}
+.cu-widget[data-embedded] .cu-launcher{transform:translateY(calc(var(--cu-lift,0px) * -1));transition:box-shadow .3s var(--cu-ease),transform .5s var(--cu-ease)}
+
+/* Panel */
+.cu-widget .cu-panel{position:fixed;right:26px;bottom:102px;display:flex;flex-direction:column;width:min(420px,calc(100vw - 36px));height:min(640px,calc(100dvh - 120px));min-height:300px;overflow:hidden;pointer-events:auto;background:var(--cu-card);border:1px solid #e6edf0;border-radius:var(--cu-r-l);box-shadow:0 24px 80px rgba(19,46,57,.16),0 4px 16px rgba(19,46,57,.05);animation:cu-panel-in .36s var(--cu-ease) both}
+.cu-widget.cu-open .cu-panel{bottom:24px;height:min(640px,calc(100dvh - 48px))}
+@keyframes cu-panel-in{from{transform:translateY(8px)}to{transform:none}}
+
+.cu-widget .cu-header{flex:none;display:flex;align-items:center;justify-content:flex-end;padding:10px 10px 2px 16px;background:var(--cu-card)}
+.cu-widget .cu-head-actions{flex:none;display:flex;align-items:center;gap:2px}
+.cu-widget .cu-lang-select{display:flex;align-items:center;margin-right:4px}
+.cu-widget .cu-lang-select button{min-width:32px;height:32px;padding:0 6px;border:0;border-radius:8px;background:transparent;color:var(--cu-muted);font-size:13px;font-weight:600;transition:background-color .3s var(--cu-ease),color .3s var(--cu-ease)}
+.cu-widget .cu-lang-select button[aria-pressed=true]{color:var(--cu-blue-text);background:var(--cu-blue-pale)}
+.cu-widget .cu-lang-select button[aria-pressed=false]:hover{background:var(--cu-soft);color:var(--cu-quiet)}
+.cu-widget .cu-lang-sep{width:1px;height:14px;margin:0 3px;background:#d5dee2}
+.cu-widget .cu-header-button{display:grid;place-items:center;width:34px;height:34px;padding:0;border:0;border-radius:var(--cu-r-s);background:transparent;color:var(--cu-quiet);transition:background-color .3s var(--cu-ease)}
+.cu-widget .cu-header-button svg{width:18px;height:18px}
+.cu-widget .cu-header-button:hover{background:var(--cu-soft)}
+
+/* Conversation area. A soft top fade keeps the earliest visible line from looking cut under the header. */
+.cu-widget .cu-content{flex:1;min-height:0;display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:14px 18px 24px 20px;overflow-wrap:anywhere;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 22px,#000 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 22px,#000 100%)}
+.cu-widget .cu-content::-webkit-scrollbar{width:6px}
+.cu-widget .cu-content::-webkit-scrollbar-thumb{background:#e2e9ec;border-radius:20px}
+
+.cu-widget .cu-welcome{margin:auto 0;padding:20px 4px 12px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.cu-widget .cu-welcome h1{margin:14px 0 4px;font-size:21px;line-height:1.3;font-weight:600;letter-spacing:-.03em;color:var(--cu-ink)}
+.cu-widget .cu-tagline{margin:0;font-size:14px;color:var(--cu-muted)}
+.cu-widget .cu-starts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:24px}
+.cu-widget .cu-chip{min-height:38px;padding:8px 15px;border:0;border-radius:var(--cu-r-pill);background:var(--cu-soft);color:var(--cu-body);font-size:13px;font-weight:600;line-height:1.35;transition:background-color .3s var(--cu-ease),color .3s var(--cu-ease)}
+.cu-widget .cu-chip:hover{background:var(--cu-blue-pale);color:var(--cu-blue-text)}
+.cu-widget .cu-chip--main{background:var(--cu-blue-pale);color:var(--cu-blue-text)}
+.cu-widget .cu-chip--main:hover{box-shadow:inset 0 0 0 1px var(--cu-blue)}
+
+/* Messages: one CT Ency head (animated mascot + name) above the latest reply. */
+.cu-widget .cu-messages{display:flex;flex-direction:column;gap:24px;padding:12px 0 8px}
+.cu-widget .cu-message{display:flex;flex-direction:column;align-items:flex-start;min-width:0;animation:cu-message-in .32s var(--cu-ease) both}
+@keyframes cu-message-in{from{transform:translateY(4px)}to{transform:none}}
+.cu-widget .cu-message--user{align-items:flex-end}
+.cu-widget .cu-chat-head{display:flex;align-items:center;gap:8px;margin:0 0 6px -6px}
+.cu-widget .cu-message__from{font-size:13px;font-weight:600;color:var(--cu-muted)}
+.cu-widget .cu-message__stack{min-width:0;width:100%}
+.cu-widget .cu-message--user .cu-message__stack{width:auto;max-width:84%}
+.cu-widget .cu-topic-label{margin:0 2px 6px;font-size:12px;font-weight:600;color:var(--cu-blue-text)}
+.cu-widget .cu-bubble{padding:11px 15px;background:var(--cu-bot-bg);border-radius:6px var(--cu-r-m) var(--cu-r-m) var(--cu-r-m);font-size:14px;line-height:1.65;color:var(--cu-body);white-space:pre-line;overflow-wrap:anywhere}
+.cu-widget .cu-message--user .cu-bubble{background:var(--cu-user-bg);color:var(--cu-user-ink);border-radius:var(--cu-r-m) 6px var(--cu-r-m) var(--cu-r-m)}
+.cu-widget .cu-source{margin:8px 2px 0;font-size:12px;line-height:1.55;color:var(--cu-muted)}
+.cu-widget .cu-page-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.cu-widget .cu-page-link{display:inline-flex;align-items:center;gap:8px;min-height:38px;max-width:100%;padding:8px 16px;border:1.5px solid var(--cu-blue);border-radius:var(--cu-r-pill);background:var(--cu-card);color:var(--cu-blue-text);font-size:13px;font-weight:600;line-height:1.35;text-decoration:none;cursor:pointer;transition:background-color .3s var(--cu-ease)}
+.cu-widget .cu-page-link::after{content:"→";font-weight:600}
+.cu-widget .cu-page-link:hover{background:var(--cu-blue-pale)}
+.cu-widget .cu-answer-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.cu-widget .cu-answer-links a{display:inline-flex;align-items:center;min-height:36px;max-width:100%;padding:8px 14px;border-radius:var(--cu-r-pill);background:var(--cu-blue-pale);color:var(--cu-blue-text);font-size:13px;font-weight:600;line-height:1.35;text-decoration:none;transition:box-shadow .3s var(--cu-ease)}
+.cu-widget .cu-answer-links a:hover{box-shadow:inset 0 0 0 1px var(--cu-blue)}
+.cu-widget .cu-email-address{display:block;margin:8px 2px 0;font-size:14px;color:var(--cu-body);user-select:text;overflow-wrap:anywhere}
+.cu-widget .cu-followups{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.cu-widget .cu-followup{min-height:36px;padding:7px 14px;background:var(--cu-card);border:1px solid var(--cu-border);border-radius:var(--cu-r-pill);color:var(--cu-blue-text);font-size:13px;font-weight:600;line-height:1.35;text-align:left;transition:background-color .3s var(--cu-ease),border-color .3s var(--cu-ease)}
+.cu-widget .cu-followup:hover{background:var(--cu-blue-pale);border-color:transparent}
+.cu-widget .cu-tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0 0;padding:0;list-style:none}
+.cu-widget .cu-tech-grid li{padding:8px 12px;font-size:13px;line-height:1.45;color:var(--cu-body);background:var(--cu-soft);border-radius:var(--cu-r-s)}
+.cu-widget .cu-typing-row{display:flex;flex-direction:column;align-items:flex-start}
+.cu-widget .cu-typing{padding:7px 14px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;border-radius:6px var(--cu-r-m) var(--cu-r-m) var(--cu-r-m);background:var(--cu-bot-bg);color:var(--cu-quiet);font-size:13px}
+.cu-widget .cu-latest{position:relative;align-self:center;flex:none;margin:0 0 6px;min-height:34px;padding:6px 16px;background:var(--cu-card);border:0;border-radius:var(--cu-r-pill);color:var(--cu-blue-text);font-size:13px;font-weight:600;pointer-events:auto;box-shadow:0 4px 16px rgba(19,46,57,.12)}
+
+/* Composer: one rounded field with a round send button inside. */
+.cu-widget .cu-composer{flex:none;padding:6px 14px 10px;background:var(--cu-card)}
+.cu-widget .cu-composer__row{display:flex;align-items:flex-end;gap:6px;padding:5px 5px 5px 16px;border:1px solid transparent;border-radius:24px;background:var(--cu-soft);transition:border-color .3s var(--cu-ease),box-shadow .3s var(--cu-ease),background-color .3s var(--cu-ease)}
+.cu-widget .cu-composer__row:focus-within{background:var(--cu-card);border-color:var(--cu-blue);box-shadow:0 0 0 3px var(--cu-accent-shadow)}
+.cu-widget .cu-composer textarea{display:block;resize:none;flex:1;width:100%;min-width:0;min-height:38px;max-height:92px;padding:8px 0;border:0;background:transparent;outline:none!important;font-size:15px;line-height:22px;color:var(--cu-ink)}
+.cu-widget .cu-composer textarea::placeholder{color:#62737c;opacity:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cu-widget .cu-send{display:grid;place-items:center;width:38px;height:38px;flex:none;padding:0;border:0;border-radius:50%;background:var(--cu-send);color:#fff;transition:box-shadow .3s var(--cu-ease),background-color .3s var(--cu-ease)}
+.cu-widget .cu-send svg{width:18px;height:18px}
+.cu-widget .cu-send:not(:disabled):hover{box-shadow:0 0 0 3px var(--cu-accent-shadow)}
+.cu-widget .cu-send:disabled{background:#dfe7ea;color:#62737c;cursor:default}
+.cu-widget .cu-compose-note{margin:7px 0 0;text-align:center;font-size:11.5px;line-height:1.4;color:var(--cu-muted)}
+
+/* Phones and small windows */
+@media(max-width:650px){
+  .cu-widget .cu-launcher{right:14px;bottom:calc(14px + env(safe-area-inset-bottom));width:64px;height:64px}
+  .cu-widget .ce-mascot--launcher{width:54px;height:54px}
+  .cu-widget .ce-mascot--chat{width:64px;height:64px}
+  .cu-widget .ce-mascot--xl{width:102px;height:102px}
+  .cu-widget.cu-open .cu-panel,.cu-widget .cu-panel{left:8px;right:8px;top:calc(8px + env(safe-area-inset-top));bottom:auto;width:auto;height:calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));min-height:0;border-radius:22px}
+  .cu-widget .cu-header{padding:8px 8px 0 14px}
+  .cu-widget .cu-content{padding:12px 14px 20px 16px}
+  .cu-widget .cu-composer{padding:6px 10px calc(10px + env(safe-area-inset-bottom))}
+  .cu-widget .cu-composer textarea{font-size:16px}
+}
+@media(max-width:400px){.cu-widget .cu-tech-grid{grid-template-columns:1fr}}
+@media(max-height:500px){
+  .cu-widget .cu-header{padding:4px 8px 0}
+  .cu-widget .cu-welcome .ce-mascot{display:none}
+  .cu-widget .ce-mascot--chat{width:48px;height:48px}
+  .cu-widget .cu-composer{padding:6px}
+  .cu-widget .cu-panel{height:calc(100dvh - 16px);top:8px;bottom:auto}
+}
+@media(prefers-reduced-motion:reduce){.cu-widget *,.cu-widget *::before,.cu-widget *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* CT-ENCY-CSS-END */

@@ -1,0 +1,194 @@
+(() => {
+  const embeddedProductImages = Object.fromEntries([...document.querySelectorAll("#productRail .product-card img")].map((image, index) => [["ct-decarb.png", "ct-fyran.png", "ct-crova.png", "ct-camel.png", "ct-garon.png"][index], image.dataset.deferSrc ? new URL(image.dataset.deferSrc, document.baseURI).href : image.src]));
+  "use strict";
+  const featuredProducts = [{ code: "CT-DECARB", line: { en: "Carbon Credit UAV product line", vi: "Dòng sản phẩm UAV Đánh giá tín chỉ carbon" }, category: { en: "Environment", vi: "Môi trường" }, image: "ct-decarb.png", alt: { en: "Carbon credit UAV", vi: "UAV Đánh giá tín chỉ carbon" } }, { code: "CT-FYRAN", line: { en: "Firefighting UAV product line", vi: "Dòng sản phẩm UAV Phòng cháy chữa cháy" }, category: { en: "Safety", vi: "An toàn" }, image: "ct-fyran.png", alt: { en: "Firefighting UAV", vi: "UAV Phòng cháy chữa cháy" } }, { code: "CT-CROVA", line: { en: "Agricultural UAV product line", vi: "Dòng sản phẩm UAV Nông nghiệp" }, category: { en: "Agriculture", vi: "Nông nghiệp" }, image: "ct-crova.png", alt: { en: "Agricultural UAV", vi: "UAV Nông nghiệp" } }, { code: "CT-CAMEL", line: { en: "Cargo UAV product line", vi: "Dòng sản phẩm UAV Vận tải và giao hàng" }, category: { en: "Logistics", vi: "Vận tải" }, image: "ct-camel.png", alt: { en: "Cargo UAV", vi: "UAV Vận tải và giao hàng" } }, { code: "CT NEXVIS", line: { en: "Surveillance UAV product line", vi: "Dòng sản phẩm UAV An ninh" }, category: { en: "Surveillance", vi: "An ninh" }, image: "ct-garon.png", alt: { en: "Surveillance UAV", vi: "UAV An ninh" } }];
+  const pageNames = { home: { en: "Home", vi: "Trang chủ" }, products: { en: "All products", vi: "Tất cả sản phẩm" }, about: { en: "About CT UAV", vi: "Về CT UAV" }, shareholders: { en: "Partnerships", vi: "Quan hệ đối tác" }, news: { en: "News", vi: "Tin tức" }, contact: { en: "Contact", vi: "Liên hệ" } };
+  const siteHeader = document.getElementById("siteHeader");
+  const siteSurface = document.querySelector(".site-surface");
+  const productRail = document.getElementById("productRail");
+  const productsPanel = document.getElementById("productsPanel");
+  const productsToggle = document.getElementById("productsToggle");
+  const allProducts = document.getElementById("allProducts");
+  const menuButton = document.getElementById("menuButton");
+  const mainNav = document.getElementById("mainNav");
+  const languageButton = document.getElementById("languageButton");
+  const hoverPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  let language = "en";
+  let selectedPage = null;
+  let selectedProduct = null;
+  function renderProducts() {
+    productRail.replaceChildren();
+    for (const [index, product] of featuredProducts.entries()) {
+      const item = document.createElement("div");
+      item.className = "product-item";
+      const category = document.createElement("span");
+      category.className = "product-category";
+      category.textContent = product.category[language];
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "product-card";
+      button.dataset.productIndex = String(index);
+      button.setAttribute("aria-label", `${product.code}: ${product.line[language]}`);
+      const media = document.createElement("span");
+      media.className = "product-card__media";
+      const image = document.createElement("img");
+      if (window.ctuavRailReady) image.src = embeddedProductImages[product.image];
+      else image.dataset.deferSrc = embeddedProductImages[product.image];
+      image.alt = product.alt[language];
+      image.loading = "eager";
+      media.append(image);
+      const info = document.createElement("span");
+      info.className = "product-card__info";
+      const title = document.createElement("span");
+      title.className = "product-card__title";
+      title.textContent = product.code;
+      info.append(title);
+      button.append(media, info);
+      item.append(category, button);
+      productRail.append(item);
+    }
+  }
+  function closeProducts(restoreFocus = false) {
+    const wasOpen = !productsPanel.hidden;
+    productsPanel.hidden = true;
+    productsToggle.setAttribute("aria-expanded", "false");
+    if (restoreFocus && wasOpen) productsToggle.focus();
+  }
+  function openProducts() {
+    productsPanel.hidden = false;
+    productsToggle.setAttribute("aria-expanded", "true");
+  }
+  function closeMobileMenu() {
+    mainNav.classList.remove("is-open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation");
+  }
+  function showStatus() {
+    const productRoutes = ["line-05", "line-04", "line-09", "line-02", "line-07"];
+    if (selectedProduct !== null && productRoutes[selectedProduct]) {
+      window.ctuavDemo.navigate(productRoutes[selectedProduct]);
+    } else if (["home", "about", "shareholders", "news", "contact", "products", "uav-components"].includes(selectedPage)) {
+      window.ctuavDemo.navigate(selectedPage);
+    } else {
+      const name = selectedProduct !== null ? featuredProducts[selectedProduct].code : pageNames[selectedPage]?.[language];
+      if (name) window.ctuavDemo.planned(language === "en" ? `${name} · Page planned` : `${name} · Trang đang chuẩn bị`);
+    }
+  }
+  function setLanguage(next) {
+    language = next;
+    document.documentElement.lang = next;
+    document.querySelectorAll("[data-i18n-en][data-i18n-vi]").forEach((element) => {
+      element.textContent = element.dataset[`i18n${next[0].toUpperCase()}${next.slice(1)}`];
+    });
+    window.ctuavI18n?.set(next);
+    document.querySelectorAll("iframe").forEach((frame) => frame.contentWindow?.postMessage({ namespace: "ctuav-demo", type: "lang", lang: next }, "*"));
+    if (next === "vi") window.ctuavDemo?.planned("Bản dịch nháp, chờ duyệt · Draft translation for review");
+    renderProducts();
+    showStatus();
+  }
+  productsToggle.addEventListener("mouseenter", () => {
+    if (hoverPointer.matches) openProducts();
+  });
+  productsToggle.addEventListener("click", () => {
+    if (hoverPointer.matches) {
+      closeProducts();
+      window.ctuavDemo.navigate("products");
+      return;
+    }
+    if (productsPanel.hidden) openProducts();
+    else if (!hoverPointer.matches) closeProducts();
+  });
+  siteHeader.addEventListener("mouseleave", () => {
+    if (hoverPointer.matches) closeProducts();
+  });
+  document.querySelectorAll(".nav-link:not(.nav-products)").forEach((button) => {
+    button.addEventListener("mouseenter", () => {
+      if (hoverPointer.matches) closeProducts();
+    });
+  });
+  allProducts.addEventListener("click", () => {
+    selectedPage = "products";
+    selectedProduct = null;
+    showStatus();
+    closeProducts();
+    closeMobileMenu();
+  });
+  menuButton.addEventListener("click", () => {
+    const open = !mainNav.classList.contains("is-open");
+    mainNav.classList.toggle("is-open", open);
+    menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+    if (!open) closeProducts();
+  });
+  productRail.addEventListener("click", (event) => {
+    const card = event.target.closest(".product-card");
+    if (!card) return;
+    selectedProduct = Number(card.dataset.productIndex);
+    selectedPage = null;
+    showStatus();
+    closeProducts();
+    closeMobileMenu();
+  });
+  document.querySelectorAll("[data-page]").forEach((button) => button.addEventListener("click", () => {
+    selectedPage = button.dataset.page;
+    selectedProduct = null;
+    showStatus();
+    closeProducts();
+    closeMobileMenu();
+  }));
+  document.querySelectorAll("[data-planned-nav]").forEach((button) => button.addEventListener("click", () => {
+    window.ctuavDemo?.planned(button.dataset.plannedNav + " · Page planned");
+    closeProducts();
+    closeMobileMenu();
+  }));
+  window.ctuavSetLanguage = setLanguage;
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      if (!productsPanel.hidden) closeProducts(true);
+      else closeMobileMenu();
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (!siteHeader.contains(event.target)) {
+      closeProducts();
+      closeMobileMenu();
+    }
+  });
+  renderProducts();
+  window.ctuavNav = { close() {
+    closeProducts();
+    closeMobileMenu();
+  }, updateRoute(route) {
+    selectedPage = null;
+    selectedProduct = null;
+    document.querySelectorAll('[data-page="home"]').forEach((e) => e.classList.toggle("is-current", route === "home"));
+    productsToggle.classList.toggle("is-current", ["line-01", "line-02", "line-03", "line-04", "line-05", "line-06", "line-07", "line-08", "line-09", "line-10", "line-11", "line-12", "line-13", "line-14", "line-15", "line-16", "decarb22", "ct-skysilk", "ct-camel-256", "ct-pegas-230", "ct-fyran-256", "ct-frona-44", "ct-crova-254", "decarb54", "products"].includes(route));
+    document.querySelectorAll('[data-page="about"]').forEach((e) => e.classList.toggle("is-current", route === "about"));
+    document.querySelectorAll('[data-page="shareholders"]').forEach((e) => e.classList.toggle("is-current", route === "shareholders"));
+    document.querySelectorAll('[data-page="contact"]').forEach((e) => e.classList.toggle("is-current", route === "contact"));
+    document.querySelectorAll('[data-page="news"]').forEach((e) => e.classList.toggle("is-current", route === "news" || route === "news-post"));
+  } };
+  window.ctuavNav.updateRoute(window.ctuavDemo.route);
+  const measurePanel = () => {
+    document.documentElement.style.setProperty("--panel-available-height", Math.max(80, innerHeight - siteHeader.offsetHeight) + "px");
+  };
+  new ResizeObserver(measurePanel).observe(siteHeader);
+  addEventListener("resize", measurePanel);
+  measurePanel();
+})();
+(() => {
+  const run = () => {
+    window.ctuavRailReady = true;
+    document.querySelectorAll("#productRail img[data-defer-src]").forEach((i) => {
+      if (i.dataset.deferSrcset) i.srcset = i.dataset.deferSrcset;
+      i.src = i.dataset.deferSrc;
+      i.removeAttribute("data-defer-src");
+      i.removeAttribute("data-defer-srcset");
+    });
+  };
+  ["productsToggle", "menuButton"].forEach((id) => {
+    const b = document.getElementById(id);
+    if (b) ["pointerenter", "focus", "click", "touchstart"].forEach((t) => b.addEventListener(t, run, { once: true, passive: true }));
+  });
+  addEventListener("load", () => setTimeout(run, 3e3), { once: true });
+})();
