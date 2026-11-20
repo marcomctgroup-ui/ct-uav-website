@@ -1,3 +1,5 @@
+> **Historical log only - 20 November 2026:** The instructions below describe earlier workspace states. They are not current operating instructions. The current published build is connected and enabled on the existing staging service. Read the dated root [technical guide](../README.md) for current setup, endpoints, credentials and release limits.
+
 > **Repository note (17 November 2026):** this log was copied from the CT UAV Marcom workspace. Paths such as `projects/main-website/staging/` and links to `HANDOFF.md` or `handoff/` refer to that workspace. In this repository, run the same commands from the root with `staging/` (for example `python staging/build.py`). See the root `README.md`.
 
 # CMS tools update - 17 November 2026

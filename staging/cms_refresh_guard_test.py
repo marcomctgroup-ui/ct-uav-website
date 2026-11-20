@@ -169,7 +169,7 @@ class GuardTests(unittest.TestCase):
 
 class RefreshUidTests(unittest.TestCase):
     """cms_refresh reuses stored _uid values for unchanged bloks."""
-    SOURCE = HERE.parent / 'refactor-v15'
+    SOURCE = HERE.parent / json.loads((HERE / 'config.json').read_text(encoding='utf-8'))['source']
 
     def refresh(self, export):
         import contextlib, io

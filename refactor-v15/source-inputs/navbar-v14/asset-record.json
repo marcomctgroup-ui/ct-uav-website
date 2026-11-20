@@ -1,8 +1,0 @@
-{
-  "pegas_source": "projects/home-media/october-posts/image-edits-v03/sources/PEGAS-source-cutout.png",
-  "source_sha256": "0c3a3b61d87c72c052b41d580ea2ca0b4aa423956c217d1ad814b257b33f12f9",
-  "delivery": "assets/img/v14/pegas-navbar.webp",
-  "operation": "RGBA WebP encoding at 480px; no shape or background edit",
-  "nexvis": "assets/img/v10/ct-nexvis-54-cutout-2c42c6f42d3c.png",
-  "nexvis_operation": "Existing transparent PNG, unchanged"
-}

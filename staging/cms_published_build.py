@@ -1,6 +1,6 @@
 """Published-only CMS site generation for a later staging release.
 
-NOT connected to build.py. It reads published stories only (Public token),
+build.py calls this only when STORYBLOK_PUBLISHED_BUILD=1. It reads published stories only (Public token),
 validates every representative product as publish-ready, generates into a fresh
 folder below staging/checks and replaces the last good output only after full
 success. On any failure the last good output stays unchanged. A missing or
@@ -108,6 +108,32 @@ def check_published(snapshot, validate, keys):
             validate(content, assets, preview=False)
         except Exception as error:
             raise PublishedBuildError(f'Product failed published validation: {name}: {error}') from None
+    # A published dependency can still be marked unreviewed. Follow only
+    # content actually referenced by these products (including asset posters).
+    dependencies = {s['uuid']: s for s in snapshot['stories']
+                    if s['content'].get('component') in {'creative_asset', 'technology'}}
+    checked = set()
+
+    def check_dependencies(value):
+        if isinstance(value, dict):
+            for child in value.values():
+                check_dependencies(child)
+        elif isinstance(value, list):
+            for child in value:
+                check_dependencies(child)
+        elif isinstance(value, str) and value in dependencies and value not in checked:
+            checked.add(value)
+            story = dependencies[value]
+            content = story['content']
+            name = content.get('title') or content.get('name') or value
+            if story.get('published') is False or content.get('review_state') != 'ready':
+                raise PublishedBuildError(f'Referenced content is unpublished or not ready: {name}')
+            if not {'en', 'vi'} <= set(content.get('ready_languages') or []):
+                raise PublishedBuildError(f'Referenced content is missing a ready language (en, vi): {name}')
+            check_dependencies(content)
+
+    for content in products.values():
+        check_dependencies(content)
     return sorted(products)
 
 
@@ -162,6 +188,14 @@ def build(token, source, *, root=ROOT, fetch=cms_delivery.fetch_snapshot, genera
         snapshot_path.unlink()
         if not (candidate / 'index.html').is_file():
             raise PublishedBuildError('Generated site has no index.html')
+        # The shared renderer writes page content only. Preserve the selected
+        # release metadata and add just the verified CMS asset origins.
+        for name in ('404.html', 'sitemap.xml'):
+            if (Path(source) / name).is_file():
+                shutil.copyfile(Path(source) / name, candidate / name)
+        headers = (Path(source) / '_headers').read_text(encoding='utf-8')
+        original_csp = source_csp(headers)
+        (candidate / '_headers').write_text(headers.replace(original_csp, csp), encoding='utf-8')
         files = tree_summary(candidate)
         manifest = {
             'mode': 'published', 'built_at': datetime.now(timezone.utc).isoformat(timespec='seconds'),

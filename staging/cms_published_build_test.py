@@ -64,7 +64,10 @@ class PublishedBuildTest(unittest.TestCase):
         self.assertTrue((self.root / 'current/pages/decarb22.html').is_file())
         self.assertEqual(manifest['products'], ['decarb22', 'decarb54'])
         self.assertEqual(manifest['cv'], 42)
-        self.assertEqual(manifest['output']['files'], 3)
+        self.assertEqual(manifest['output']['files'], 6)
+        self.assertTrue((self.root / 'current/404.html').is_file())
+        self.assertEqual((self.root / 'current/sitemap.xml').read_bytes(), (SOURCE / 'sitemap.xml').read_bytes())
+        self.assertIn('https://a2.storyblok.com', (self.root / 'current/_headers').read_text(encoding='utf-8'))
         text = (self.root / 'manifest.json').read_text(encoding='utf-8')
         self.assertNotIn(TOKEN, text)
         self.assertNotIn('"content"', text)
@@ -117,6 +120,28 @@ class PublishedBuildTest(unittest.TestCase):
         with self.assertRaises(pb.PublishedBuildError):
             pb.build(TOKEN, SOURCE, root=pb.HERE / 'dist', fetch=lambda v, t: snapshot(), generate=fake_generate,
                      validate=ok_validate, keys=KEYS)
+
+    def test_referenced_content_readiness_and_last_good_output(self):
+        self.good()
+        before = (self.root / 'current/index.html').read_text(encoding='utf-8')
+        asset = {'id': 10, 'uuid': 'asset-used', 'published': True,
+                 'content': {'component': 'creative_asset', 'review_state': 'ready', 'ready_languages': ['en', 'vi']}}
+        tech = {'id': 11, 'uuid': 'tech-used', 'published': True,
+                'content': {'component': 'technology', 'review_state': 'ready', 'ready_languages': ['en', 'vi'], 'image': 'asset-used'}}
+        unused = {'id': 12, 'uuid': 'unused', 'published': False,
+                  'content': {'component': 'creative_asset', 'review_state': 'draft'}}
+        first = product('decarb22', technologies=['tech-used'])
+        second = product('decarb54')
+        for record in (asset, tech):
+            for key, bad in [('published', False), ('review_state', 'draft'), ('ready_languages', ['en'])]:
+                target = record if key == 'published' else record['content']
+                original = target[key]
+                target[key] = bad
+                with self.assertRaisesRegex(pb.PublishedBuildError, 'Referenced content'):
+                    self.run_build(snapshot(first, second, asset, tech, unused))
+                self.assert_last_good_kept(before)
+                target[key] = original
+        self.run_build(snapshot(first, second, asset, tech, unused))
 
     def test_cms_csp_adds_only_storyblok_asset_origins(self):
         source = pb.source_csp((SOURCE / '_headers').read_text(encoding='utf-8'))

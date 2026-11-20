@@ -1,0 +1,132 @@
+{
+  "_note": "SEO settings for refactor-v16. URLs are NOT final (PENDING CONFIRMATION by DAIT). Change paths here and run 20261117-v16-perf-seo-build.py again; do not edit pages one by one. Descriptions marked auto come from existing page copy and need human review.",
+  "canonical_base": "https://ctuav.global/",
+  "site_name": "CT UAV",
+  "organization": {
+    "name": "CT UAV",
+    "parent": "CT Group",
+    "logo": "assets/img/ct-uav-d4035ad7bb.svg",
+    "telephone": "+84938602962"
+  },
+  "routes": {
+    "home": {
+      "page": "hero",
+      "path": ""
+    },
+    "products": {
+      "page": "products",
+      "path": "products/"
+    },
+    "uav-components": {
+      "page": "uav-components",
+      "path": "components/"
+    },
+    "about": {
+      "page": "about",
+      "path": "about/"
+    },
+    "shareholders": {
+      "page": "shareholders",
+      "path": "partnerships/"
+    },
+    "news": {
+      "page": "news",
+      "path": "news/"
+    },
+    "news-post": {
+      "page": "news-post",
+      "path": "news/us-joint-venture-assembly-plant/",
+      "parents": [
+        "news"
+      ]
+    },
+    "contact": {
+      "page": "contact",
+      "path": "contact/"
+    },
+    "decarb22": {
+      "page": "decarb22",
+      "path": "products/decarb-22/",
+      "type": "product"
+    },
+    "decarb54": {
+      "page": "decarb54",
+      "path": "products/decarb-54/",
+      "type": "product"
+    },
+    "ct-pegas-230": {
+      "page": "ct-pegas-230",
+      "path": "products/ct-pegas-230/",
+      "type": "product"
+    },
+    "ct-fyran-256": {
+      "page": "ct-fyran-256",
+      "path": "products/ct-fyran-256/",
+      "type": "product"
+    },
+    "ct-fyran-firefighting": {
+      "page": "ct-fyran-firefighting",
+      "path": "products/ct-fryan/",
+      "type": "product"
+    },
+    "ct-nexvis-54": {
+      "page": "ct-nexvis-54",
+      "path": "products/ct-nexvis-54/",
+      "type": "product"
+    },
+    "ct-camel-256": {
+      "page": "ct-camel-256",
+      "path": "products/ct-camel-256/",
+      "type": "product"
+    },
+    "ct-frona-44": {
+      "page": "ct-frona-44",
+      "path": "products/ct-frona-44/",
+      "type": "product"
+    },
+    "ct-crova-254": {
+      "page": "ct-crova-254",
+      "path": "products/ct-crova-254/",
+      "type": "product"
+    },
+    "ct-glova": {
+      "page": "ct-glova",
+      "path": "products/ct-glova/",
+      "type": "product"
+    },
+    "ct-skysilk": {
+      "page": "ct-skysilk",
+      "path": "products/ct-skysilk/",
+      "type": "product"
+    }
+  },
+  "route_patterns": {
+    "line-NN": {
+      "page": "line-NN",
+      "path": "applications/<slug>/",
+      "parents": [
+        "products"
+      ]
+    },
+    "component-ID": {
+      "page": "component-ID",
+      "path": "components/ID/",
+      "parents": [
+        "uav-components"
+      ]
+    }
+  },
+  "description_overrides": {
+    "home": "CT UAV, a member of CT Group Hi-tech, makes UAV solutions for the Low Altitude Economy (LAE). See the UAV product lines, models, components, news and sales contacts.",
+    "products": "See the 16 CT UAV product lines for the Low Altitude Economy (LAE): passenger, cargo, rescue, firefighting, carbon credit, security, agriculture, inspection and more.",
+    "news": "News from CT UAV, a member of CT Group Hi-tech: company updates, partnerships and UAV projects for the Low Altitude Economy (LAE)."
+  },
+  "_draft_descriptions": [
+    "products",
+    "news"
+  ],
+  "h1_overrides": {
+    "home": "CT UAV – UAV solutions for the Low Altitude Economy (LAE)"
+  },
+  "_decisions_20261118": "User: product names CT-FYRAN (not CT-FRYAN), keep 'Surveillance UAV' for line 7, keep CT SKYSILK; content approved."
+}

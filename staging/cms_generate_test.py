@@ -14,7 +14,7 @@ class GenerationTests(unittest.TestCase):
         data = json.loads((root / 'handoff/20261112-storyblok-draft-records-v01.json').read_text(encoding='utf-8'))
         cls.assets = {a['uuid']: a['content'] for a in data['assets'].values()}
         cls.products = [r['content'] for r in data['records'] if r['content']['component'] == 'uav_product']
-        cls.template = (root / 'refactor-v09/pages/decarb22.html').read_text(encoding='utf-8')
+        cls.template = (root / 'refactor-v18/pages/decarb22.html').read_text(encoding='utf-8')
 
     def test_four_variants_validate_as_drafts(self):
         self.assertEqual(len(self.products), 4)
@@ -75,7 +75,7 @@ class GenerationTests(unittest.TestCase):
 
     def test_image_template_cannot_silently_accept_video(self):
         root = Path(__file__).resolve().parent.parent
-        template = (root / 'refactor-v09/pages/ct-crova-254.html').read_text(encoding='utf-8')
+        template = (root / 'refactor-v18/pages/ct-crova-254.html').read_text(encoding='utf-8')
         with self.assertRaises(ValueError):
             cms.render(template, self.products[0], self.assets, 'en')
 
@@ -90,7 +90,7 @@ class GenerationTests(unittest.TestCase):
     def test_four_templates_render_both_languages(self):
         root = Path(__file__).resolve().parent.parent
         for product in self.products:
-            template = (root / 'refactor-v09/pages' / (product['content_id'] + '.html')).read_text(encoding='utf-8')
+            template = (root / 'refactor-v18/pages' / (product['content_id'] + '.html')).read_text(encoding='utf-8')
             for language in ('en', 'vi'):
                 output = cms.render(template, product, self.assets, language)
                 self.assertIn('https://a.storyblok.com/f/', output)
@@ -102,7 +102,7 @@ class GenerationTests(unittest.TestCase):
         chapter = p['story_sections'][0]
         chapter['body']['content'][0]['content'][0]['text'] = 'CMS chapter text'
         chapter['azimuth'] = '123'
-        template = (root / 'refactor-v09/pages' / (p['content_id'] + '.html')).read_text(encoding='utf-8')
+        template = (root / 'refactor-v18/pages' / (p['content_id'] + '.html')).read_text(encoding='utf-8')
         output = cms.render(template, p, self.assets, 'en')
         self.assertIn('CMS chapter text', output)
         self.assertIn('data-ps-cam="123,', output)
