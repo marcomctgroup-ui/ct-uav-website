@@ -116,10 +116,61 @@ before changing hosting. Existing cloud account ownership/access must be confirm
 
 ## 6. Hosting settings and production work
 
-Current staging uses Cloudflare Pages, framework None, build `python staging/build.py`
-when this root layout is connected, output `staging/dist`. These are handoff settings,
-not a request to reconnect the current site. The existing Marcom deployment uses its
-workspace-relative build command instead.
+### Repository roles
+
+| Repository | Role | Current Cloudflare connection |
+| --- | --- | --- |
+| `marcomctgroup-ui/ct-uav-website` | Website-only source for DAIT; use `main` | Not connected to the current staging project |
+| `marcomctgroup-ui/ct-uav` | Original Marcom workspace | Supplies `ct-uav-staging`, branch `staging` |
+
+Use this website-only repository for the handoff and future deployment setup.
+The original workspace remains the source of the existing demo during the transfer.
+A push to this repository does not update that demo.
+
+### DAIT transfer checklist
+
+1. Confirm company access to this GitHub repository, the Cloudflare account and
+   the existing CT UAV Storyblok space. Transfer credentials privately.
+2. If DAIT selects Cloudflare Pages, create a separate test project connected to
+   this repository. Keep the existing demo available until the replacement passes
+   review. Use these settings from this repository root:
+
+   | Setting | Value |
+   | --- | --- |
+   | Repository | `marcomctgroup-ui/ct-uav-website` |
+   | Branch | `main` |
+   | Framework | None |
+   | Root directory | Repository root |
+   | Build command | `python -m pip install -r staging/cms-requirements.txt && python staging/build.py` |
+   | Output directory | `staging/dist` |
+
+   Use Python 3.10 or later and verify that Git LFS downloads real media files.
+   The current Marcom project's longer `projects/main-website/...` paths do not
+   apply to this website-only repository. Cloudflare's Production branch label
+   does not make this test project an approved official release.
+3. Reuse the existing Storyblok space and its published records. No content
+   re-upload is needed for the current four-product integration. Configure the
+   build and worker settings listed in section 5, including
+   `STORYBLOK_PUBLISHED_BUILD=1`. Keep public and preview credentials separate.
+4. Test draft preview on the new host. Update the Storyblok Visual Editor preview
+   location and review allowed origins/CSP for the new address. Confirm that
+   authorized preview loads and unauthenticated requests remain blocked.
+5. After the new build passes, create a deployment hook for its selected branch.
+   Update the Storyblok Publish connection to that hook as part of the agreed
+   transfer. Protect the hook URL. Confirm the hook target before removing the old
+   connection. A successful publish must build the intended project; do not start
+   a duplicate manual build while the hook-started build is running.
+6. Verify direct routes, refresh, media, EN/VI content, product cards, CMS publishing
+   and rollback on the new host. Complete the security/performance review and
+   remaining form-delivery work. Record the results and access/support owners.
+7. Prepare the production URL, canonical, sitemap, redirect and indexing settings.
+   Obtain Supervisor release approval. DAIT then handles the official domain,
+   DNS, SSL and deployment. Retire the old staging connection only after the
+   replacement is verified and its continued use is no longer required.
+
+These are transfer instructions. They do not change the current connection or
+authorize a domain change. If DAIT selects another host, preserve the same CMS
+delivery, protected-preview, worker and recovery behavior and test that setup.
 
 The build is deliberately a STAGING build: it writes robots exclusion and retains
 noindex headers. Do not deploy this output to production unchanged.
