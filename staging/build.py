@@ -14,6 +14,8 @@ PROJECT = HERE.parent
 SOURCE = (PROJECT / json.loads((HERE / 'config.json').read_text(encoding='utf-8'))['source']).resolve()
 OUTPUT = HERE / 'dist'
 ALLOWED = {'assets', 'pages', 'about', 'applications', 'components', 'contact', 'news', 'partnerships', 'products'}
+# Root files copied when the selected version has them (404.html gives a real HTTP 404 on Cloudflare Pages).
+ROOT_FILES = {'index.html', '404.html', 'sitemap.xml'}
 IMMUTABLE = 'public, max-age=31536000, immutable'
 # Worker modules in bundle order. Each one may import only earlier modules.
 WORKER_MODULES = ['voice-worker.js', 'cms_published.js', 'cms_preview_auth.js', 'cms_preview.js', 'cms_worker.js']
@@ -187,22 +189,46 @@ def build_preview(output, source):
     return write_preview_status(target, {'status': 'built', 'files': len(manifest['files'])})
 
 
+def public_source(source):
+    """Explicit opt-in. A failed published build must never serve static fallback."""
+    mode = os.environ.get('STORYBLOK_PUBLISHED_BUILD', '0')
+    if mode == '0':
+        return source, {'mode': 'static'}
+    if mode != '1':
+        raise SystemExit('STOP: STORYBLOK_PUBLISHED_BUILD must be 0 or 1.')
+    token = os.environ.get('STORYBLOK_PUBLIC_TOKEN', '')
+    if not token.strip():
+        raise SystemExit('STOP: published CMS build requires STORYBLOK_PUBLIC_TOKEN.')
+    try:
+        from cms_preview_build import ensure_dependencies
+        ensure_dependencies()
+        import cms_published_build
+        manifest = cms_published_build.build(token, source)
+    except Exception as error:
+        import cms_delivery
+        message = re.sub(r'\s+', ' ', cms_delivery.redact(error, token))
+        raise SystemExit('STOP: published CMS build failed; deployment must keep the last good site: ' + message) from None
+    return cms_published_build.CURRENT, {
+        'mode': 'published', 'products': manifest['products'], 'cv': manifest['cv']}
+
+
 def main():
     if SOURCE.parent != PROJECT or not (SOURCE / 'index.html').is_file():
         raise SystemExit('STOP: source must be a website version directly inside main-website.')
-    files = sorted(p for p in SOURCE.rglob('*') if p.is_file() and
-                   (p.relative_to(SOURCE).parts[0] in ALLOWED or p.relative_to(SOURCE).as_posix() == 'index.html'))
+    source, cms_public = public_source(SOURCE)
+    files = sorted(p for p in source.rglob('*') if p.is_file() and
+                   (p.relative_to(source).parts[0] in ALLOWED or p.relative_to(source).as_posix() in ROOT_FILES))
     if any(p.is_symlink() or p.stat().st_size > 25 * 1024 * 1024 for p in files):
         raise SystemExit('STOP: symlink or file above the Cloudflare Pages 25 MiB limit.')
-    unresolved = [p.relative_to(SOURCE).as_posix() for p in files
+    unresolved = [p.relative_to(source).as_posix() for p in files
                   if p.read_bytes().startswith(b'version https://git-lfs.github.com/spec/v1')]
     if unresolved:
         raise SystemExit('STOP: Git LFS media is not downloaded: ' + ', '.join(unresolved))
-    if (SOURCE / 'index.html').stat().st_size >= 500_000:
+    if (source / 'index.html').stat().st_size >= 500_000:
         raise SystemExit('STOP: entry HTML is above the project size budget.')
-    original_rules = parse_headers((SOURCE / '_headers').read_text(encoding='utf-8'))
+    original_rules = parse_headers((source / '_headers').read_text(encoding='utf-8'))
     security = next(headers for path, headers in original_rules if path == '/*')
-    assets = {'/' + p.relative_to(SOURCE).as_posix(): p for p in files if p.relative_to(SOURCE).parts[0] == 'assets'}
+    assets = {'/' + p.relative_to(source).as_posix(): p for p in files if p.relative_to(source).parts[0] == 'assets'}
     selected = {path for path, headers in original_rules if headers.get('Cache-Control') == IMMUTABLE}
     if not selected <= assets.keys() or any(not content_hashed(assets[path]) for path in selected):
         raise SystemExit('STOP: an immutable asset is missing or its filename hash does not match its bytes.')
@@ -228,7 +254,7 @@ def main():
     OUTPUT.mkdir()
     manifest = []
     for path in files:
-        relative = path.relative_to(SOURCE)
+        relative = path.relative_to(source)
         destination = OUTPUT / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(path, destination)
@@ -248,7 +274,7 @@ def main():
         'version': 1, 'include': include, 'exclude': []
     }), encoding='utf-8')
     report = {'source': SOURCE.name, 'files_copied': len(manifest), 'source_bytes_unchanged': True,
-              'entry_bytes': (SOURCE / 'index.html').stat().st_size,
+              'entry_bytes': (source / 'index.html').stat().st_size, 'cms_public': cms_public,
               'total_bytes': sum(item['bytes'] for item in manifest), 'header_rules': len(rules),
               'immutable_assets': len(selected), 'cache_policy_differences': 0,
               'generated_files': ['_headers', 'robots.txt', '_worker.js', '_routes.json'], 'files': manifest}

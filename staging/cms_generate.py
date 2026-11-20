@@ -265,7 +265,7 @@ def generate(snapshot_path, output, *, preview=False):
         technologies = {item['uuid']: item['content'] for item in snapshot.get('technologies', [])}
         product['_resolved_technologies'] = [technologies[key] for key in product.get('technologies', [])]
         validate(product, assets, preview=preview)
-        template = (PROJECT / 'refactor-v09' / 'pages' / (product['content_id'] + '.html')).read_text(encoding='utf-8')
+        template = (PROJECT / json.loads((HERE / 'config.json').read_text(encoding='utf-8'))['source'] / 'pages' / (product['content_id'] + '.html')).read_text(encoding='utf-8')
         for language in ('en', 'vi'):
             target = output / language / 'pages' / (product['content_id'] + '.html')
             target.parent.mkdir(parents=True, exist_ok=True)

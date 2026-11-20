@@ -1,3 +1,0 @@
-Built-in imagegen; transparent_background=true. Input: supplied UAV_00204.jpg. Final prompt:
-Extract ONLY the complete aircraft from this supplied photo. True transparent background, clean hard alpha edges around product, fully empty transparency everywhere outside aircraft. NO black background, NO grey glow, NO smoke, NO vignette, NO lighting bloom, NO shadow. Preserve exact original aircraft shape, propellers, rotors, legs, labels, carbon textures, camera and antennas. Do not redraw, redesign or add parts. Product photo cutout on transparency for WHITE webpage. Whole aircraft visible.
-Final generated source: fyran-navbar-cutout-v02.png. First generation had a grey glow and was replaced. Human identity and release approval pending.

@@ -19,7 +19,7 @@ const ok = (value, message) => { assert(value, message); checks++; };
 const eq = (a, b, message) => { assert.equal(a, b, message); checks++; };
 
 // 1. Public CSP constant matches the selected source _headers /* rule.
-const headersFile = (await readFile(new URL('../refactor-v15/_headers', import.meta.url), 'utf8')).replace(/\r\n/g, '\n');
+const headersFile = (await readFile(new URL('../refactor-v18/_headers', import.meta.url), 'utf8')).replace(/\r\n/g, '\n');
 const star = headersFile.split('\n/*\n')[1];
 const sourceCsp = star.split('\n').find(line => line.trim().startsWith('Content-Security-Policy:')).split(':').slice(1).join(':').trim();
 eq(PREVIEW_PUBLIC_CSP, sourceCsp, 'public CSP constant differs from refactor-v15/_headers');

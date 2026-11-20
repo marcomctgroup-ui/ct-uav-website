@@ -1,0 +1,532 @@
+{
+ "label": "integ-cf",
+ "port": "8866",
+ "viewports": {
+  "desktop": {
+   "steps": [
+    {
+     "step": "load /",
+     "url": "/",
+     "title": "CT UAV | Member of CT Group Hi-tech",
+     "frames": "heroFrame@/pages/hero",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [
+      "308 /pages/hero.html",
+      "200 /pages/hero"
+     ],
+     "redirects": 1,
+     "notFound": []
+    },
+    {
+     "step": "nav About",
+     "url": "/about/",
+     "title": "About CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-about@/pages/about",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [
+      "200 /pages/about"
+     ],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "nav Components",
+     "url": "/components/",
+     "title": "UAV Components | CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-uav-components@/pages/uav-components",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [
+      "200 /pages/uav-components"
+     ],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "Components: first card",
+     "url": "/components/esc-100a-6s/",
+     "title": "ESC-100A-6S Electronic Speed Controller | CT UAV Components",
+     "frames": "heroFrame@/pages/hero + frame-component-esc-100a-6s@/pages/component-esc-100a-6s",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [
+      "200 /pages/component-esc-100a-6s"
+     ],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "detail: Back to category (../components/?category=ESC)",
+     "url": "/components/",
+     "title": "UAV Components | CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-uav-components@/pages/uav-components",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": [],
+     "categorySelect": "ESC"
+    },
+    {
+     "step": "history back",
+     "url": "/components/esc-100a-6s/",
+     "title": "ESC-100A-6S Electronic Speed Controller | CT UAV Components",
+     "frames": "heroFrame@/pages/hero + frame-component-esc-100a-6s@/pages/component-esc-100a-6s",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "history forward",
+     "url": "/components/",
+     "title": "UAV Components | CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-uav-components@/pages/uav-components",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "history back again",
+     "url": "/components/esc-100a-6s/",
+     "title": "ESC-100A-6S Electronic Speed Controller | CT UAV Components",
+     "frames": "heroFrame@/pages/hero + frame-component-esc-100a-6s@/pages/component-esc-100a-6s",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "detail: Enquire",
+     "url": "/contact/",
+     "title": "Contact CT UAV | CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-contact@/pages/contact",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [
+      "200 /pages/contact"
+     ],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "history back",
+     "url": "/components/esc-100a-6s/",
+     "title": "ESC-100A-6S Electronic Speed Controller | CT UAV Components",
+     "frames": "heroFrame@/pages/hero + frame-component-esc-100a-6s@/pages/component-esc-100a-6s",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "language VI",
+     "url": "/components/esc-100a-6s/",
+     "title": "ESC-100A-6S Electronic Speed Controller | CT UAV Components",
+     "frames": "heroFrame@/pages/hero + frame-component-esc-100a-6s@/pages/component-esc-100a-6s",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": [],
+     "detailText": "← Trở lại danh mục"
+    },
+    {
+     "step": "nav Contact (VI)",
+     "url": "/contact/",
+     "title": "Contact CT UAV | CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-contact@/pages/contact",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": [],
+     "htmlLang": "vi"
+    },
+    {
+     "step": "nav Components (VI)",
+     "url": "/components/",
+     "title": "UAV Components | CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-uav-components@/pages/uav-components",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": [],
+     "crumbText": "Trang chủ"
+    },
+    {
+     "step": "Components: breadcrumb Home",
+     "url": "/",
+     "title": "CT UAV | Member of CT Group Hi-tech",
+     "frames": "heroFrame@/pages/hero",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "language EN",
+     "url": "/",
+     "title": "CT UAV | Member of CT Group Hi-tech",
+     "frames": "heroFrame@/pages/hero",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "direct /products/decarb-22/",
+     "url": "/products/decarb-22/",
+     "title": "DECARB 22 | CT UAV",
+     "frames": "heroFrame@blank + frame-decarb22@/pages/decarb22",
+     "mode": "pretty",
+     "loads": 2,
+     "pageDocRequests": [
+      "200 /pages/decarb22"
+     ],
+     "redirects": 0,
+     "notFound": [
+      "/api/cms/decarb22"
+     ]
+    },
+    {
+     "step": "direct /components/3530/",
+     "url": "/components/3530/",
+     "title": "3530 Fixed-Wing Motor | CT UAV Components",
+     "frames": "heroFrame@blank + frame-component-3530@/pages/component-3530",
+     "mode": "pretty",
+     "loads": 3,
+     "pageDocRequests": [
+      "200 /pages/component-3530"
+     ],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "direct /components/?category=Propeller",
+     "url": "/components/?category=Propeller",
+     "title": "UAV Components | CT UAV",
+     "frames": "heroFrame@blank + frame-uav-components@/pages/uav-components?category=Propeller",
+     "mode": "pretty",
+     "loads": 4,
+     "pageDocRequests": [
+      "200 /pages/uav-components?category=Propeller"
+     ],
+     "redirects": 0,
+     "notFound": [],
+     "categorySelect": "Propeller"
+    },
+    {
+     "step": "direct /contact/",
+     "url": "/contact/",
+     "title": "Contact CT UAV | CT UAV",
+     "frames": "heroFrame@blank + frame-contact@/pages/contact",
+     "mode": "pretty",
+     "loads": 5,
+     "pageDocRequests": [
+      "200 /pages/contact"
+     ],
+     "redirects": 0,
+     "notFound": []
+    }
+   ],
+   "errors": [
+    "console Failed to load resource: the server responded with a status of 404 (Not Found)"
+   ],
+   "forcedClicks": [
+    "back"
+   ]
+  },
+  "phone": {
+   "steps": [
+    {
+     "step": "load /",
+     "url": "/",
+     "title": "CT UAV | Member of CT Group Hi-tech",
+     "frames": "heroFrame@/pages/hero",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [
+      "308 /pages/hero.html",
+      "200 /pages/hero"
+     ],
+     "redirects": 1,
+     "notFound": []
+    },
+    {
+     "step": "nav About",
+     "url": "/about/",
+     "title": "About CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-about@/pages/about",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [
+      "200 /pages/about"
+     ],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "nav Components",
+     "url": "/components/",
+     "title": "UAV Components | CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-uav-components@/pages/uav-components",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [
+      "200 /pages/uav-components"
+     ],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "Components: first card",
+     "url": "/components/esc-100a-6s/",
+     "title": "ESC-100A-6S Electronic Speed Controller | CT UAV Components",
+     "frames": "heroFrame@/pages/hero + frame-component-esc-100a-6s@/pages/component-esc-100a-6s",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [
+      "200 /pages/component-esc-100a-6s"
+     ],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "detail: Back to category (../components/?category=ESC)",
+     "url": "/components/",
+     "title": "UAV Components | CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-uav-components@/pages/uav-components",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": [],
+     "categorySelect": "ESC"
+    },
+    {
+     "step": "history back",
+     "url": "/components/esc-100a-6s/",
+     "title": "ESC-100A-6S Electronic Speed Controller | CT UAV Components",
+     "frames": "heroFrame@/pages/hero + frame-component-esc-100a-6s@/pages/component-esc-100a-6s",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "history forward",
+     "url": "/components/",
+     "title": "UAV Components | CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-uav-components@/pages/uav-components",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "history back again",
+     "url": "/components/esc-100a-6s/",
+     "title": "ESC-100A-6S Electronic Speed Controller | CT UAV Components",
+     "frames": "heroFrame@/pages/hero + frame-component-esc-100a-6s@/pages/component-esc-100a-6s",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "detail: Enquire",
+     "url": "/contact/",
+     "title": "Contact CT UAV | CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-contact@/pages/contact",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [
+      "200 /pages/contact"
+     ],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "history back",
+     "url": "/components/esc-100a-6s/",
+     "title": "ESC-100A-6S Electronic Speed Controller | CT UAV Components",
+     "frames": "heroFrame@/pages/hero + frame-component-esc-100a-6s@/pages/component-esc-100a-6s",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "language VI",
+     "url": "/components/esc-100a-6s/",
+     "title": "ESC-100A-6S Electronic Speed Controller | CT UAV Components",
+     "frames": "heroFrame@/pages/hero + frame-component-esc-100a-6s@/pages/component-esc-100a-6s",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": [],
+     "detailText": "← Trở lại danh mục"
+    },
+    {
+     "step": "nav Contact (VI)",
+     "url": "/contact/",
+     "title": "Contact CT UAV | CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-contact@/pages/contact",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": [],
+     "htmlLang": "vi"
+    },
+    {
+     "step": "nav Components (VI)",
+     "url": "/components/",
+     "title": "UAV Components | CT UAV",
+     "frames": "heroFrame@/pages/hero + frame-uav-components@/pages/uav-components",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": [],
+     "crumbText": "Trang chủ"
+    },
+    {
+     "step": "Components: breadcrumb Home",
+     "url": "/",
+     "title": "CT UAV | Member of CT Group Hi-tech",
+     "frames": "heroFrame@/pages/hero",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "language EN",
+     "url": "/",
+     "title": "CT UAV | Member of CT Group Hi-tech",
+     "frames": "heroFrame@/pages/hero",
+     "mode": "pretty",
+     "loads": 1,
+     "pageDocRequests": [],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "direct /products/decarb-22/",
+     "url": "/products/decarb-22/",
+     "title": "DECARB 22 | CT UAV",
+     "frames": "heroFrame@blank + frame-decarb22@/pages/decarb22",
+     "mode": "pretty",
+     "loads": 2,
+     "pageDocRequests": [
+      "200 /pages/decarb22"
+     ],
+     "redirects": 0,
+     "notFound": [
+      "/api/cms/decarb22"
+     ]
+    },
+    {
+     "step": "direct /components/3530/",
+     "url": "/components/3530/",
+     "title": "3530 Fixed-Wing Motor | CT UAV Components",
+     "frames": "heroFrame@blank + frame-component-3530@/pages/component-3530",
+     "mode": "pretty",
+     "loads": 3,
+     "pageDocRequests": [
+      "200 /pages/component-3530"
+     ],
+     "redirects": 0,
+     "notFound": []
+    },
+    {
+     "step": "direct /components/?category=Propeller",
+     "url": "/components/?category=Propeller",
+     "title": "UAV Components | CT UAV",
+     "frames": "heroFrame@blank + frame-uav-components@/pages/uav-components?category=Propeller",
+     "mode": "pretty",
+     "loads": 4,
+     "pageDocRequests": [
+      "200 /pages/uav-components?category=Propeller"
+     ],
+     "redirects": 0,
+     "notFound": [],
+     "categorySelect": "Propeller"
+    },
+    {
+     "step": "direct /contact/",
+     "url": "/contact/",
+     "title": "Contact CT UAV | CT UAV",
+     "frames": "heroFrame@blank + frame-contact@/pages/contact",
+     "mode": "pretty",
+     "loads": 5,
+     "pageDocRequests": [
+      "200 /pages/contact"
+     ],
+     "redirects": 0,
+     "notFound": []
+    }
+   ],
+   "errors": [
+    "console Failed to load resource: the server responded with a status of 404 (Not Found)"
+   ],
+   "forcedClicks": []
+  }
+ },
+ "freshDirect": [
+  {
+   "route": "/products/decarb-22/",
+   "onLoad": [
+    "308 /pages/decarb22.html",
+    "200 /pages/decarb22"
+   ],
+   "afterFirstAction": [
+    "200 /pages/hero"
+   ],
+   "errors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+   ]
+  },
+  {
+   "route": "/components/?category=Propeller",
+   "onLoad": [
+    "308 /pages/uav-components.html?category=Propeller",
+    "200 /pages/uav-components?category=Propeller"
+   ],
+   "afterFirstAction": [
+    "200 /pages/hero"
+   ],
+   "categorySelect": "Propeller",
+   "errors": []
+  },
+  {
+   "route": "/about/",
+   "onLoad": [
+    "308 /pages/about.html",
+    "200 /pages/about"
+   ],
+   "afterFirstAction": [
+    "200 /pages/hero"
+   ],
+   "errors": []
+  }
+ ]
+}
